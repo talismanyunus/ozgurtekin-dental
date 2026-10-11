@@ -50,6 +50,13 @@ const Footbar = () => {
                 </ol>
             </div>
         </div>
+        {/* Alt imza çizgisi */}
+        <div className='border-t border-[#1a3a6b] mt-10 py-5 flex sm:flex-col md:flex-row justify-between items-center sm:px-3 md:px-16 gap-2'>
+            <p className='text-neutral-400 text-sm'>© {new Date().getFullYear()} Dt. Mehmet Ali Kaban Ağız ve Diş Sağlığı. Tüm hakları saklıdır.</p>
+            <a href="https://yusahmedia.com" target='_blank' rel='noreferrer' className='text-neutral-400 text-sm hover:text-[#00ACB1] duration-300'>
+                Tasarım & Geliştirme: <span className='font-semibold text-[#00ACB1]'>yusahmedia</span>
+            </a>
+        </div>
     </div>
   )
 }
