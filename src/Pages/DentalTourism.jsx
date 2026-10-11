@@ -69,19 +69,21 @@ const DentalTourism = () => {
         </div>
       </div>
       {/* DropDowns */}
-      <div className="flex justify-center sm:flex-col md:flex-col lg:flex-row   w-full sm:my-12 md:my-24 lg:my-64 sm:px-5 md:px-10 lg:px-28">
-        <ScrollAnimation animateIn="fadeInLeft" className="lg:absolute sm:px-3 md:px-16 sm:w-full md:w-full sm:flex md:flex sm:justify-center md:justify-center sm:h-[500px] md:h-[600px] sm:pb-6 md:pb-10">
+      <div className="flex sm:flex-col md:flex-col lg:flex-row items-center w-full sm:my-12 md:my-24 lg:my-32 sm:px-5 md:px-10 lg:px-28 gap-10">
+        {/* Görsel — sadece lg'de göster */}
+        <div className="lg:w-1/2 sm:hidden md:hidden lg:flex lg:justify-end">
           <img
             src={BlogImage2}
             alt="Background Image"
-            className="lg:w-4/5 sm:object-none md:object-cover sm:object-top md:object-center sm:h-full md:h-full sm:w-full md:w-full lg:relative blur-[1px] lg:left-96 lg:bottom-40 lg:z-[-5]"
+            className="w-full h-[500px] object-cover blur-[1px] rounded-lg"
           />
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInRight" className="flex flex-col sm:px-3 md:px-16 lg:-ml-52">
+        </div>
+        {/* İçerik */}
+        <div className="flex flex-col lg:w-1/2 sm:w-full md:w-full">
           <p className="text-[#00ACB1] sm:text-sm font-bold">{t("dental")}</p>
           <div className="child:text-[#002856] child:font-bold sm:child:text-2xl md:child:text-4xl lg:child:text-4xl mt-3 mb-10">
             <p>
-              <Trans components={{ br: <br className="sm:hidden md:hiddne"/> }}>{t("dentalTitle")}</Trans>
+              <Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("dentalTitle")}</Trans>
             </p>
           </div>
           <div className="flex sm:flex-col md:flex-col gap-5 z-10 mb-10 child:text-white child:rounded-md child-hover:bg-[#00ACB1] child:px-6 md:child:px-5 child:py-4 md:child:py-2 child:duration-300 md:child:text-2xl">
@@ -158,58 +160,37 @@ const DentalTourism = () => {
               <Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("dentalDropdown4Description")}</Trans>
             </p>
           </div>
-        </ScrollAnimation>
+        </div>
       </div>
       {/* Countrys Gallery */}
       <ScrollAnimation animateIn="fadeInTop" className="flex flex-col items-center py-10 sm:px-3 md:px-16">
         <p className="sm:text-2xl text-4xl font-bold text-[#002856] sm:text-center">
           {t("dentalGalleryTitle")}
         </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5   lg:px-24 py-14">
-          <div className="relative group">
-            <img src={Gallery1} alt="Gallery Image 1" className="group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0 h-60 lg:w-[100%]"/>
-            <div className="bg-[#002856] absolute bottom-1/2 top-1/3 left-1/3 opacity-0 group-hover:opacity-100 right-1/3 m-auto duration-500">
-              <p className="text-2xl font-bold text-white text-center pt-1">Saranda</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:px-24 py-14 w-full">
+          {[
+            { src: Gallery1, label: "Alanya" },
+            { src: Gallery2, label: "Antalya" },
+            { src: Gallery3, label: "Konyaaltı" },
+            { src: Gallery4, label: "Side" },
+            { src: Gallery5, label: "Belek" },
+            { src: Gallery6, label: "İstanbul" },
+            { src: Gallery7, label: "Kapadokya" },
+          ].map((item, i) => (
+            <div key={i} className="relative group overflow-hidden rounded-lg h-60">
+              <img
+                src={item.src}
+                alt={item.label}
+                className="w-full h-full object-cover group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0"
+              />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
+                <div className="bg-[#002856] px-6 py-2 rounded">
+                  <p className="text-2xl font-bold text-white text-center">{item.label}</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="relative group">
-            <img src={Gallery2} alt="Gallery Image 1" className="group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0 h-60 lg:w-[100%]"/>
-            <div className="bg-[#002856] absolute bottom-1/2 top-1/3 left-1/3 opacity-0 group-hover:opacity-100 right-1/3 m-auto duration-500">
-              <p className="text-2xl font-bold text-white text-center pt-1">Vlora</p>
-            </div>
-          </div>
-          <div className="relative group">
-            <img src={Gallery3} alt="Gallery Image 1" className="group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0 h-60 lg:w-[100%]"/>
-            <div className="bg-[#002856] absolute bottom-1/2 top-1/3 left-1/3 opacity-0 group-hover:opacity-100 right-1/3 m-auto duration-500">
-              <p className="text-2xl font-bold text-white text-center pt-1">Ksamil</p>
-            </div>
-          </div>
-          <div className="relative group">
-            <img src={Gallery4} alt="Gallery Image 1" className="group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0 h-60 lg:w-[100%]"/>
-            <div className="bg-[#002856] absolute bottom-1/2 top-1/3 left-1/3 opacity-0 group-hover:opacity-100 right-1/3 m-auto duration-500">
-              <p className="text-2xl font-bold text-white text-center pt-1">Divjaka</p>
-            </div>
-          </div>
-
-          <div className="relative group">
-            <img src={Gallery5} alt="Gallery Image 1" className="group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0 h-60 lg:w-[100%]"/>
-            <div className="bg-[#002856] absolute bottom-1/2 top-1/3 left-1/3 opacity-0 group-hover:opacity-100 right-1/3 m-auto duration-500">
-              <p className="text-2xl font-bold text-white text-center pt-1">Lukove</p>
-            </div>
-          </div>
-          <div className="relative group">
-            <img src={Gallery6} alt="Gallery Image 1" className="group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0 h-60 lg:w-[100%]"/>
-            <div className="bg-[#002856] absolute bottom-1/2 top-1/3 left-1/3 opacity-0 group-hover:opacity-100 right-1/3 m-auto duration-500">
-              <p className="text-2xl font-bold text-white text-center pt-1">Dhermi</p>
-            </div>
-          </div>
-          <div className="relative group">
-            <img src={Gallery7} alt="Gallery Image 1" className="group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0 h-60 lg:w-[100%]"/>
-            <div className="bg-[#002856] absolute bottom-1/2 top-1/3 left-1/3 opacity-0 group-hover:opacity-100 right-1/3 m-auto duration-500">
-              <p className="text-2xl font-bold text-white text-center pt-1">Gjirokastra</p>
-            </div>
-          </div>
-        </div>  
+          ))}
+        </div>
       </ScrollAnimation>
     </div>
   )

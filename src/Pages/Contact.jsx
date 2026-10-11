@@ -2,6 +2,7 @@ import {useState} from 'react';
 import Maps from '../Components/Maps';
 import { SubCategorys } from '../data/Form Data/data.json';
 import { SubCategorysItalian } from '../data/Form Data/data.italian.json';
+import { SubCategorysTurkish } from '../data/Form Data/data.turkish.json';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useTranslation } from 'react-i18next';
 
@@ -11,19 +12,34 @@ const Contact = (props) => {
   const [categoryData, setCategoryData] = useState([])
   const [category, setCategory] = useState(false)
 
+  const nameValidation = (e) => {
+    // basic name validation placeholder
+  }
+  const emailValidation = (e) => {
+    // basic email validation placeholder
+  }
+  const numberValidation = (e) => {
+    // basic number validation placeholder
+  }
+
 
   const categoryFilter = (e) => { 
-    console.log(language)
-    if(language !== "it"){
-      for(var i = 0;i < SubCategorys.length;i++){
-        if(SubCategorys[i].category == e.target.value){
-          setCategoryData(SubCategorys[i].subCategorys)
+    if(language === "tr"){
+      for(var i = 0;i < SubCategorysTurkish.length;i++){
+        if(SubCategorysTurkish[i].category == e.target.value){
+          setCategoryData(SubCategorysTurkish[i].subCategorys)
         }
       }
-    }else{
+    }else if(language === "it"){
       for(var i = 0;i < SubCategorysItalian.length;i++){
         if(SubCategorysItalian[i].category == e.target.value){
           setCategoryData(SubCategorysItalian[i].subCategorys)
+        }
+      }
+    }else{
+      for(var i = 0;i < SubCategorys.length;i++){
+        if(SubCategorys[i].category == e.target.value){
+          setCategoryData(SubCategorys[i].subCategorys)
         }
       }
     }
@@ -49,8 +65,12 @@ const Contact = (props) => {
               setCategory(e)
               }} name="Kategoria" className='bg-transparent border-slate-500 border rounded-md pl-3 py-3'required>
             {
-              (language == "it")
+              language === "it"
               ? Array.from(SubCategorysItalian).map(data => (
+                  <option className="text-neutral-500" key={data.category} value={data.category}>{data.category}</option>
+                ))
+              : language === "tr"
+              ? Array.from(SubCategorysTurkish).map(data => (
                   <option className="text-neutral-500" key={data.category} value={data.category}>{data.category}</option>
                 ))
               : Array.from(SubCategorys).map(data => (

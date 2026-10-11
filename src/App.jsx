@@ -2,18 +2,23 @@ import { Routes,Route } from 'react-router-dom'
 import './App.css'
 import { Home, About, DentalTourism, Blog, BlogsTypes, Services, ContactPage, ServiceTypes, PrivacyPolicy, TermsConditions } from './Pages/index';
 import Navbar from './Components/Navbar';
-import { useState,useLayoutEffect } from 'react';
+import { useState, useLayoutEffect, useEffect } from 'react';
 import { Logo, Whatsapp } from './assets/index';
 import Footbar from './Components/Footbar';
-import ReactGA from 'react-ga';
-
-ReactGA.initialize('G-FRDW6Q9T7Z')
+import { defaultLang } from './Components/i18n.js';
 
 function App() {
   const [ loading, setLoading ] = useState(false);
   const [ typeOfService, setTypeOfService ] = useState("");
   const [ blogType, setBlogType ] = useState("");
-  const [ language,setLanguage] = useState("it");
+  const [ language, setLanguage ] = useState(defaultLang);
+
+  // Dil değişince Tawk.to widget dilini güncelle
+  useEffect(() => {
+    if (window.Tawk_API && window.Tawk_API.setAttributes) {
+      window.Tawk_API.setAttributes({ language }, function(){});
+    }
+  }, [language]);
 
   useLayoutEffect(() => {
     setLoading(true)
@@ -27,8 +32,8 @@ function App() {
       {
         loading 
           ? 
-            <div>
-              <img src={Logo} alt='Logo Loading' className='absolute left-0 right-0 bottom-0 top-0 m-auto animate-bounce w-40'/>
+            <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+              <img src={Logo} alt='Logo Loading' className='animate-bounce w-56 overflow-visible'/>
             </div>
         
           : 

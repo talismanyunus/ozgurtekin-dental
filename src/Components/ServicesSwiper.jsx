@@ -2,10 +2,22 @@ import React from 'react'
 import {Swiper,SwiperSlide} from 'swiper/react';
 import { ServicesImage1,ServicesImage2,ServicesImage4,ServicesImage5, SurgeryIcon, GeneralIcon, CosmeticIcon, AeshteticIcon, ImplantologjiIcon, ConservativeIcon } from '../assets';
 import { Link } from 'react-router-dom';
-import { Navigation } from "swiper";
+import { Navigation } from "swiper/core";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useTranslation } from 'react-i18next';
 import "swiper/css/navigation";
+
+// Slide verisi — tekrar kodu önlemek için
+const slides = [
+  { img: ServicesImage4, icon: ImplantologjiIcon, labelKey: "servicesButton2", iconPad: "p-1" },
+  { img: ServicesImage2, icon: ConservativeIcon,  labelKey: "servicesButton3", iconPad: "p-3" },
+  { img: ServicesImage1, icon: CosmeticIcon,      labelKey: "servicesButton4", iconPad: "p-3" },
+  { img: ServicesImage5, icon: AeshteticIcon,     labelKey: "servicesButton5", iconPad: "p-3" },
+  { img: ServicesImage4, icon: SurgeryIcon,       labelKey: "servicesButton2", iconPad: "p-3" },
+  { img: ServicesImage2, icon: GeneralIcon,       labelKey: "servicesButton3", iconPad: "p-3" },
+  { img: ServicesImage1, icon: CosmeticIcon,      labelKey: "servicesButton4", iconPad: "p-3" },
+  { img: ServicesImage5, icon: AeshteticIcon,     labelKey: "servicesButton5", iconPad: "p-3" },
+];
 
 const ServicesSwiper = () => {
   const { t } = useTranslation();
@@ -27,105 +39,46 @@ const ServicesSwiper = () => {
           speed="1000"
           loop={true}
           breakpoints={{
-            767:{
-              slidesPerView: 2,
-            },
-            992: {
-              slidesPerView: 3
-            }
+            767: { slidesPerView: 2 },
+            992: { slidesPerView: 3 }
           }}
         >
-          {/* Slide 1 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage4} alt="Image 1" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={ImplantologjiIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-1 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton2")}</p>
+          {slides.map((slide, i) => (
+            <SwiperSlide key={i}>
+              <div className='border-r-2 border-slate-100 border-b-2 group flex flex-col'>
+                {/* Görsel + overlay birlikte overflow-hidden container içinde */}
+                <div className='relative overflow-hidden h-56'>
+                  <img
+                    src={slide.img}
+                    alt={`Service ${i + 1}`}
+                    draggable="false"
+                    className='w-full h-full object-cover'
+                  />
+                  {/* Hover overlay — görsel içinde kalır */}
+                  <div className='absolute inset-0 linearBlue opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[10]' />
+                </div>
+                {/* İkon + Başlık — görsel ile metin arasında sabit hizalamak için flex */}
+                <div className='relative flex flex-col border-r-2 border-slate-100 border-b-2'>
+                  <img
+                    src={slide.icon}
+                    alt='Service Icon'
+                    width={70}
+                    className={`absolute -top-9 left-6 z-10 ${slide.iconPad} rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300`}
+                  />
+                  <p className='pt-10 pb-6 pl-10 text-2xl text-[#002856] font-bold'>
+                    {t(slide.labelKey)}
+                  </p>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          {/* Slide 2 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage2} alt="Image 2" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={ConservativeIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-3 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton3")}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* Slide 3 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage1} alt="Image 1" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={CosmeticIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-3 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton4")}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* Slide 4 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage5} alt="Image 1" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={AeshteticIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-3 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton5")}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* Slide 1 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage4} alt="Image 1" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={SurgeryIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-3 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton2")}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* Slide 2 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage2} alt="Image 2" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={GeneralIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-3 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton3")}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* Slide 3 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage1} alt="Image 1" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={CosmeticIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-3 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton4")}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          {/* Slide 4 */}
-          <SwiperSlide>
-            <div className='border-r-2 border-slate-100 border-b-2 group'>
-              <div className='h-fill w-fill top-96 bottom-[25%] left-0 right-0  linearBlue z-[10] absolute group-hover:top-20 duration-300'>.</div>
-              <img src={ServicesImage5} alt="Image 1" draggable="false"/>
-              <div className='border-r-2 border-slate-100 border-b-2 z-[20]'>
-                <img src={AeshteticIcon} alt='Tooth Icon' width={70} className='absolute z-10 left-6 bottom-20 p-3 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300'/>
-                <p className='py-10 pl-10 text-2xl text-[#002856] font-bold'>{t("servicesButton5")}</p>
-              </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
+          ))}
         </Swiper>
-        </div>
-        <Link to="/services"><button type='submit' className='h-16 bg-[#00ACB1] px-20 rounded-lg duration-300 border-none hover:bg-[#002856] text-white mt-10'>{t("ourServicesButton")}</button></Link>
+      </div>
+      <Link to="/services">
+        <button type='submit' className='h-16 bg-[#00ACB1] px-20 rounded-lg duration-300 border-none hover:bg-[#002856] text-white mt-10'>
+          {t("ourServicesButton")}
+        </button>
+      </Link>
     </ScrollAnimation>
   )
 }

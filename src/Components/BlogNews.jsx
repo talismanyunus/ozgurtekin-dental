@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useTranslation } from "react-i18next";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
+import { Navigation } from "swiper/core";
 
 const BlogNews = () => {
     const { t } = useTranslation();

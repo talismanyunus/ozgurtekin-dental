@@ -1,0 +1,64 @@
+{
+    "BlogDataTurkish": [
+        {
+            "id": "implantoloji",
+            "title": "İmplantoloji",
+            "subDescription": "İmplantoloji, eksik dişleri değiştirmek için diş implantlarının yerleştirilmesiyle ilgilenen bir diş hekimliği alanıdır. Diş implantları, çıkarılabilir veya sabit protezler için kron montajına sağlam bir temel oluşturmak amacıyla çene kemiğine yerleştirilen metal yapılardır.",
+            "subDescription2": "Öncelikle hastanın diş yapısı ve çene kemiğinin kapsamlı bir değerlendirmesi yapılır. Ardından uzmanlaşmış cerrahi teknikler kullanılarak kemiğe metal bir post yerleştirilen implant ameliyatı gerçekleştirilir. İyileşme döneminin ardından özelleştirilmiş bir kron implantın üzerine monte edilir.",
+            "subDescription3": "Diş implantları, boşlukları doldurmak için geleneksel alternatiflere kıyasla birçok avantaj sunar. Daha stabil ve uzun ömürlü bir müdahale sağlayarak çene kemiği yapısının korunmasına yardımcı olurlar.",
+            "subDescription4": "Ayrıca doğru ağız işlevini yeniden kazandırarak ve estetik özgüveni artırarak hastanın yaşam kalitesini yükseltebilirler.",
+            "coverImage": "/images/Service Images/implantology.jpg",
+            "image": "/images/Service Images/implantology.jpg",
+            "image2": "/images/Service Images/implantology.jpg",
+            "image3": "/images/Service Images/implantology.jpg",
+            "image4": "/images/Service Images/implantology.jpg",
+            "icon": "/images/Service Image Icons/implantology-icon.svg",
+            "category": "surgery"
+        },
+        {
+            "id": "pedodonti",
+            "title": "Pedodonti",
+            "subDescription": "Süt diş dolguları genç hastalara daha zevkli hale getirmek için farklı renklerle yapılır; aynı zamanda diş çürüğünü önlemek için florür salan koruyucu dolgular da uygulanır. Erken kaybedilmeleri kalıcı dişlerin çıkması için gerekli alanı tıkayabileceğinden mümkün olduğunca uzun süre korunmaları çok önemlidir.",
+            "subDescription2": "Devitalizasyon: Travma nedeniyle ağır hasar gören dişler için tedavi; pulpanın açığa çıkmasına neden olarak şiddetli ağrı ve şişliğe yol açabilir. Çocuklarda kanal tedavisi özel bakım ve deneyim gerektirir.",
+            "subDescription3": "Enfeksiyon Tedavisi: Enfekte bir diş hemen tedavi edilmelidir. Duruma göre antibiyotik tedavisi, kanalların tedavisi ve doldurulması dahil farklı tedaviler uygulanır.",
+            "subDescription4": "Florürleme: Dişleri çürükten korumak ve dayanıklılığını artırmak için her 3-6 ayda bir periyodik olarak yapılır. Diş yüzeyine birikerek çürüklere karşı daha dirençli hale getirir.",
+            "coverImage": "/images/Service Images/PedodonticsImage1.jpeg",
+            "image": "/images/Service Images/PedodonticsImage1.jpeg",
+            "image2": "/images/Service Images/PedodonticsImage2.jpeg",
+            "image3": "/images/Service Images/PedodonticsImage1.jpeg",
+            "image4": "/images/Service Images/PedodonticsImage2.jpeg",
+            "icon": "/images/Service Image Icons/pedodontic-icon.svg",
+            "category": "general-dentistry"
+        },
+        {
+            "id": "hollywood-gulüsü",
+            "title": "Hollywood Gülüşü",
+            "subDescription": "Hollywood Gülüşü, Hollywood yıldızları ve mükemmel bir diş görünümü yaratmak isteyen kişiler tarafından kullanılan çarpıcı ve çekici bir gülüşü tanımlamak için kullanılan bir terimdir. Beyaz ve düzgün dişler: Diş beyazlatma prosedürleri, boşlukların doldurulması ve diş kusurlarının düzeltilmesiyle elde edilebilir.",
+            "subDescription2": "Dişlerin şekli ve boyutu: Hollywood Gülüşündeki dişler düzenli ve uyumlu bir şekle sahiptir. Çekici ve simetrik bir gülüş oluşturmak için kompozit dolgular veya diş kronları kullanılabilir.",
+            "subDescription3": "Renk uyumu: Diş beyazlatma prosedürleri, dişler için parlak ve aydınlatıcı bir renk elde etmeye yardımcı olur.",
+            "subDescription4": "Tutarlı ağız hijyeni: Hollywood Gülüşünü korumak için düzenli diş fırçalama ve dişhekimine periyodik ziyaretler gereklidir.",
+            "coverImage": "/images/Service Images/hollywood-smile3.jpeg",
+            "image": "/images/Service Images/hollywood-smile.jpeg",
+            "image2": "/images/Service Images/hollywood-smile2.jpg",
+            "image3": "/images/Service Images/hollywood-smile3.jpeg",
+            "image4": "/images/Service Images/hollywood-smile4.jpg",
+            "icon": "/images/Service Image Icons/hollywoodSmile-icon.svg",
+            "category": "cosmetic-dentistry"
+        },
+        {
+            "id": "mikro-igneleme",
+            "title": "Mikro İğneleme (Dermapen)",
+            "subDescription": "Dermapen olarak da bilinen mikro iğneleme, ciltte kontrollü mikro yaralanmalar oluşturmak için küçük iğneli bir cihaz kullanan kozmetik bir prosedürdür. Bu süreç cildin doğal iyileşme yanıtını uyararak kollajen üretimini teşvik eder.",
+            "subDescription2": "Bir mikro iğneleme seansı sırasında eğitimli bir uzman cilt yüzeyinde küçük delikler oluşturur. Bu mikro yaralanmalar vücudun doğal iyileşme sürecini tetikler ve kollajen ile elastin üretimini uyarır.",
+            "subDescription3": "Faydaları: İnce çizgiler, akne izleri, hiperpigmentasyon, eşit olmayan cilt dokusu ve genişlemiş gözenekler dahil çeşitli cilt sorunlarını ele alabilir.",
+            "subDescription4": "Kollajen indüksiyonu: Mikro yaralanmalar ciltteki kollajen ve elastin üretimini uyarır. Bu, cilt yapısını iyileştirmeye ve kırışıklıkları azaltmaya yardımcı olur.",
+            "coverImage": "/images/Service Images/Microneedling.jpg",
+            "image": "/images/Service Images/Dermal-Fillers.jpg",
+            "image2": "/images/Service Images/Dermal-Fillers2.jpg",
+            "image3": "/images/Service Images/Dermal-Fillers.jpg",
+            "image4": "/images/Service Images/Dermal-Fillers2.jpg",
+            "icon": "/images/Service Image Icons/microneedling-icon.svg",
+            "category": "aesthetic-medicine"
+        }
+    ]
+}

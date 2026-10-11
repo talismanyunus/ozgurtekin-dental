@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react'
 import { AboutImg } from '../assets';
-import { ServicesData } from '../data/Services Data/data';
+import { ServicesData } from '../data/Services Data/data.json';
 import { ServicesDataItalian } from '../data/Services Data/data.italian.json';
 import { ServicesDataAlbanian } from '../data/Services Data/data.albanian.json';
+import { ServicesDataTurkish } from '../data/Services Data/data.turkish.json';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -17,6 +18,8 @@ const Services = (props) => {
       setCategoryData(ServicesDataItalian)
     }else if(language == "sq"){
       setCategoryData(ServicesDataAlbanian)
+    }else if(language == "tr"){
+      setCategoryData(ServicesDataTurkish)
     }else{
       setCategoryData(ServicesData)
     }
@@ -34,6 +37,12 @@ const Services = (props) => {
         setCategoryData(ServicesDataAlbanian)
       }else{
         setCategoryData(ServicesDataAlbanian.filter((data) => data.category == e.target.value))
+      }
+    }else if(language == "tr"){
+      if(e.target.value == "all"){
+        setCategoryData(ServicesDataTurkish)
+      }else{
+        setCategoryData(ServicesDataTurkish.filter((data) => data.category == e.target.value))
       }
     }else{
       if(e.target.value == "all"){
@@ -63,25 +72,37 @@ const Services = (props) => {
       </div>
       {/* Second Section */}
       <div className='flex flex-col gap-5 items-center sm:px-5 md:px-10 lg:px-28 sm:py-10 lg:py-24'>
-        <div className='flex sm:flex-col flex-row child:rounded-md child:bg-[#00ACB1] child-hover:bg-[#002856] child:border-none text-white child:duration-300 child:mb-5 md:gap-3 lg:gap-5'>
-          <button type='submit' className='sm:px-24 sm:py-2 md:p-3 md:px-4 lg:p-4 lg:px-6' value="all" onClick={(e) => searchFunction(e)}>{t("servicesButton1")}</button>
-          <button type='submit' className='sm:px-24 sm:py-2 md:px-8 lg:px-9' value="surgery" onClick={(e) => searchFunction(e)}>{t("servicesButton2")}</button>
-          <button type='submit' className='sm:px-24 sm:py-2 md:px-5 lg:px-4' value="general-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton3")}</button>
-          <button type='submit' className='sm:px-24 sm:py-2 md:px-4 lg:px-5' value="cosmetic-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton4")}</button>
-          <button type='submit' className='sm:px-24 sm:py-2 md:px-4 lg:px-7' value="aesthetic-medicine" onClick={(e) => searchFunction(e)}>{t("servicesButton5")}</button>
+        <div className='flex sm:flex-col flex-row flex-wrap justify-center gap-3 child:rounded-md child:bg-[#00ACB1] child-hover:bg-[#002856] child:border-none text-white child:duration-300'>
+          <button type='submit' className='px-5 py-3' value="all" onClick={(e) => searchFunction(e)}>{t("servicesButton1")}</button>
+          <button type='submit' className='px-5 py-3' value="surgery" onClick={(e) => searchFunction(e)}>{t("servicesButton2")}</button>
+          <button type='submit' className='px-5 py-3' value="general-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton3")}</button>
+          <button type='submit' className='px-5 py-3' value="cosmetic-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton4")}</button>
+          <button type='submit' className='px-5 py-3' value="aesthetic-medicine" onClick={(e) => searchFunction(e)}>{t("servicesButton5")}</button>
         </div>
-        <div className='grid sm:grid-cols-1 grid-cols-2 gap-5'>
+        <div className='grid sm:grid-cols-1 grid-cols-2 gap-5 w-full'>
           {
             Array.from(categoryData).map((data) => {
               return (
-                <div key={data.id} className='w-full h-full border-r-2 border-slate-100 border-b-2 group fadeInLeft'>
-                  <div className='overflow-hidden'>
-                    <img src={data.coverImage} alt="Image 2" className='w-full h-52  object-fill  group-hover:scale-110 duration-300 group-hover:rotate-2'/>
+                <div key={data.id} className='border border-slate-100 rounded-lg group overflow-hidden flex flex-col fadeInLeft shadow-sm hover:shadow-md duration-300'>
+                  {/* Görsel */}
+                  <div className='overflow-hidden h-52'>
+                    <img src={data.coverImage} alt={data.title} className='w-full h-full object-cover group-hover:scale-110 duration-300'/>
                   </div>
-                  <img src={data.icon} width={70} className={`relative bottom-9 left-5 z-10  p-${data.iconPadding} rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-500`}/>
-                  <div className='p-5  border-r-2 border-slate-100 border-b-2 -mt-10 '>
-                    <Link to={`/services/${data.id}`} onClick={() => setTypeOfService(data)}><p className='text-[#002856] text-2xl font-bold pb-5 hover:text-[#00ACB1]'>{data.title}</p></Link>
-                    <p className='text-sm  text-neutral-500 truncate'>{data.subDescription}</p>
+                  {/* İkon + İçerik */}
+                  <div className='relative flex flex-col p-5 pt-0'>
+                    {/* İkon: görselle metin arasına köprü */}
+                    <img
+                      src={data.icon}
+                      width={60}
+                      alt={data.title}
+                      className='relative -top-7 left-3 z-10 p-2 rounded-full bg-white shadow shadow-neutral-400 group-hover:bg-[#00ACB1] border-4 border-white duration-300'
+                    />
+                    <div className='-mt-4'>
+                      <Link to={`/services/${data.id}`} onClick={() => setTypeOfService(data)}>
+                        <p className='text-[#002856] text-xl font-bold pb-3 hover:text-[#00ACB1] duration-200'>{data.title}</p>
+                      </Link>
+                      <p className='text-sm text-neutral-500 line-clamp-2'>{data.subDescription}</p>
+                    </div>
                   </div>
                 </div>
               )

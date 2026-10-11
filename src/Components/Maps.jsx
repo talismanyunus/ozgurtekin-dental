@@ -1,59 +1,38 @@
 import React, {useState, useRef, useEffect} from 'react'
-// import { GoogleMap,useLoadScript,Marker } from '@react-google-maps/api'
-
-import tt from '@tomtom-international/web-sdk-maps';
 import '@tomtom-international/web-sdk-maps/dist/maps.css';
 
 const Maps = () => {
-    const mapElement = useRef(null)
-    const map = useRef(null) 
-    const [dimensions, setDimensions] = useState({
-        width: '500px',
-        height: '500px'
-    })
+    const [dimensions, setDimensions] = useState({ width: '500px', height: '500px' })
 
     useEffect(() => {
         const handleResize = () => {
             const width = Math.max(350, Math.min(window.innerWidth * 0.6, 600))
             const height = Math.max(300, Math.min(window.innerHeight * 0.6, 600))
-            setDimensions({width: width, height: height})
+            setDimensions({ width, height })
         }
-
         window.addEventListener('resize', handleResize)
         handleResize()
-
-        if (map.current) return;
-
-
-        map.current = tt.map({
-            key: import.meta.env.VITE_TOMTOM_API_KEY,
-            container: mapElement.current,
-            center: [20.1683, 41.1533],
-            zoom: 5,
-        })
-        const marker = new tt.Marker().setLngLat([20.1683, 41.1533]).addTo(map.current)
-        
-        return () => map.current.remove();
-
+        return () => window.removeEventListener('resize', handleResize)
     }, [])
 
+    // Google Maps embed — API key gerektirmez
+    const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.123456789!2d32.0040!3d36.5440!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDMyJzM4LjQiTiAzMsKwMDAnMTQuNCJF!5e0!3m2!1str!2str!4v1234567890&q=Saray,+Sug%C3%B6z%C3%BC+Cd.+Tuncer+Temiz+Plaza+No:7,+Alanya"
 
     return (
-        <div ref={mapElement} className='map-container' style={{ width: dimensions.width, height: dimensions.height}}/>
+        <div className='map-container rounded-lg overflow-hidden border border-gray-200'
+             style={{ width: dimensions.width, height: dimensions.height }}>
+            <iframe
+                title="Klinik Konumu"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src={`https://www.google.com/maps?q=Saray,+Sug%C3%B6z%C3%BC+Cd.+Tuncer+Temiz+Plaza+No:7,+Daire:3,+Kat:1,+07400+Alanya+Antalya&output=embed`}
+            />
+        </div>
     )
-
-    // Google API
-    // const { isLoaded } = useLoadScript({
-    //     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-    // });
-    // if(!isLoaded) return <div>Loading...</div>
-    
-
-    // return (
-    //     <GoogleMap zoom={13} center={{lat: 40.9420,lng: 19.6996}} mapContainerClassName='map-container'>
-    //         <Marker position={{lat: 40.9420,lng:19.6996}}/>
-    //     </GoogleMap>
-    // )
 }
 
 export default Maps

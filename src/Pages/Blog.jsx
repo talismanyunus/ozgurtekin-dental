@@ -3,6 +3,7 @@ import { AboutImg,BlogInfoImage, PlusIcon, MinusIcon } from '../assets';
 import { BlogData } from '../data/Blog Data/data.json';
 import { BlogDataAlbanian } from '../data/Blog Data/data.albanian.json';
 import { BlogDataItalian } from '../data/Blog Data/data.italian.json';
+import { BlogDataTurkish } from '../data/Blog Data/data.turkish.json';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -23,23 +24,17 @@ const Blog = (props) => {
 
   const filterFunction = (e) => {
     if(language === "en"){
-      if(e.target.value === "all"){
-        setBlog(BlogData)
-      }else{
-        setBlog(BlogData.filter((data) => data.category == e.target.value))
-      }
+      if(e.target.value === "all"){ setBlog(BlogData) }
+      else{ setBlog(BlogData.filter((data) => data.category == e.target.value)) }
     }else if(language === "sq"){
-      if(e.target.value === "all"){
-        setBlog(BlogDataAlbanian)
-      }else{
-        setBlog(BlogDataAlbanian.filter((data) => data.category == e.target.value))
-      }
+      if(e.target.value === "all"){ setBlog(BlogDataAlbanian) }
+      else{ setBlog(BlogDataAlbanian.filter((data) => data.category == e.target.value)) }
+    }else if(language === "tr"){
+      if(e.target.value === "all"){ setBlog(BlogDataTurkish) }
+      else{ setBlog(BlogDataTurkish.filter((data) => data.category == e.target.value)) }
     }else{
-      if(e.target.value === "all"){
-        setBlog(BlogDataItalian)
-      }else{
-        setBlog(BlogDataItalian.filter((data) => data.category == e.target.value))
-      }
+      if(e.target.value === "all"){ setBlog(BlogDataItalian) }
+      else{ setBlog(BlogDataItalian.filter((data) => data.category == e.target.value)) }
     }
   }
 
@@ -94,6 +89,8 @@ const Blog = (props) => {
       setBlog(BlogDataItalian)
     }else if(language == "sq"){
       setBlog(BlogDataAlbanian)
+    }else if(language == "tr"){
+      setBlog(BlogDataTurkish)
     }else{
       setBlog(BlogData)
     }

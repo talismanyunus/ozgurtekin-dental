@@ -18,15 +18,15 @@ const Footbar = () => {
                 <div className='border-b w-16 border-[#00ACB1] border-[1px] mt-6'></div>
                 <p className='flex flex-row gap-2 mt-8'>
                     <img src={Location} alt="Location Icon"/>
-                    Location
+                    Saray, Sugözü Cd. Tuncer Temiz Plaza No:7, Daire:3, Kat:1, 07400 Alanya/Antalya
                 </p>
-                <a href="#" onClick={(e) => e.preventDefault()}><p className='flex flex-row gap-2 my-4'>
+                <a href="tel:+905302193007"><p className='flex flex-row gap-2 my-4'>
                     <img src={Contact} alt='Contact Support'/>
-                    +##########
+                    0530 219 30 07
                 </p></a>
-                <a href="#" onClick={(e) => {window.location.href, e.preventDefault()}}><p className='flex flex-row gap-2'>
+                <a href="mailto:info@mehmetali.com"><p className='flex flex-row gap-2'>
                     <img src={EmailIcon} alt='Email Icon'/>
-                    email@gmail.com
+                    info@mehmetali.com
                 </p></a>
             </div>
             <div className='child:text-white sm:mt-5 '>

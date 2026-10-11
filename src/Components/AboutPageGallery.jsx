@@ -3,7 +3,7 @@ import { AboutGalleryImage1,GalleryAboutImage1, GalleryAboutImage2, GalleryAbout
 import {Swiper,SwiperSlide} from 'swiper/react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Trans, useTranslation } from 'react-i18next';
-import { Navigation } from "swiper";
+import { Navigation } from "swiper/core";
 import "swiper/css/navigation";
 
 
@@ -34,43 +34,43 @@ const AboutPageGallery = () => {
                     }}
                 >
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage1} alt="Image 1" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage1} alt="Image 1" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage2} alt="Image 2" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage2} alt="Image 2" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage3} alt="Image 3" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage3} alt="Image 3" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage4} alt="Image 4" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage4} alt="Image 4" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage1} alt="Image 1" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage1} alt="Image 1" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage2} alt="Image 2" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage2} alt="Image 2" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage3} alt="Image 3" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage3} alt="Image 3" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div>
-                            <img src={GalleryAboutImage4} alt="Image 4" draggable="false"/>
+                        <div className='overflow-hidden rounded-lg h-64'>
+                            <img src={GalleryAboutImage4} alt="Image 4" draggable="false" className='w-full h-full object-cover hover:scale-105 duration-500'/>
                         </div>
                     </SwiperSlide>
 

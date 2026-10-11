@@ -89,10 +89,10 @@ export { default as ConservativeIcon} from './Icons/conservative-icon.svg';
 
 
 // Gallery
-export { default as Gallery1 } from './Gallery/saranda.jpg';
-export { default as Gallery2 } from './Gallery/vlora.jpg';
-export { default as Gallery3 } from './Gallery/ksamil.jpg';
-export { default as Gallery4 } from './Gallery/divjaka.jpeg';
-export { default as Gallery5 } from './Gallery/lukove.jpg';
-export { default as Gallery6 } from './Gallery/dhermi.jpg';
-export { default as Gallery7 } from './Gallery/gjirokastra.jpg';
+export { default as Gallery1 } from './Gallery/alanya.jpg';
+export { default as Gallery2 } from './Gallery/antalya.jpg';
+export { default as Gallery3 } from './Gallery/konyaalti.jpg';
+export { default as Gallery4 } from './Gallery/side.jpg';
+export { default as Gallery5 } from './Gallery/belek.jpg';
+export { default as Gallery6 } from './Gallery/istanbul.jpg';
+export { default as Gallery7 } from './Gallery/kapadokya.jpg';

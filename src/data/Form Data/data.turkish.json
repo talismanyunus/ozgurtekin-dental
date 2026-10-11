@@ -1,0 +1,20 @@
+{
+    "SubCategorysTurkish": [
+        {
+            "category": "Estetik Diş Hekimliği",
+            "subCategorys": ["Dermal Dolgu", "Botoks", "Mikro İğneleme (Dermapen)", "Mezoterapi", "PRP ve PRF", "PDO Lifting İplikleri", "Kimyasal Peeling", "Plazmapen", "Skleroterapi", "Botoks Yüz"]
+        },
+        {
+            "category": "Kozmetik Diş Hekimliği",
+            "subCategorys": ["Estetik Diş Hekimliği", "Hollywood Gülüşü", "Diş Protezi", "Ortodonti"]
+        },
+        {
+            "category": "Genel Diş Hekimliği",
+            "subCategorys": ["Koruyucu Diş Hekimliği", "Sedasyon", "Endodonti", "Periodontoloji", "Pedodonti", "Radyoloji"]
+        },
+        {
+            "category": "Cerrahi",
+            "subCategorys": ["İmplantoloji", "Oral ve Maksillofasiyal Cerrahi", "Bişektomi", "Üst Dudak Kaldırma"]
+        }
+    ]
+}
