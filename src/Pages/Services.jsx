@@ -55,7 +55,7 @@ const Services = (props) => {
 
 
   return (
-    <div className="w-full flex-col">
+    <div className="w-full flex-col overflow-x-hidden">
       {/* First Section */}
       <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
         <div className="flex flex-col gap-3">
@@ -71,13 +71,13 @@ const Services = (props) => {
         />
       </div>
       {/* Second Section */}
-      <div className='flex flex-col gap-5 items-center sm:px-5 md:px-10 lg:px-28 sm:py-10 lg:py-24'>
+      <div className='flex flex-col gap-5 items-center sm:px-5 md:px-10 lg:px-28 sm:py-10 md:py-16 lg:py-24'>
         <div className='flex sm:flex-col flex-row flex-wrap justify-center gap-3 child:rounded-md child:bg-[#6B7D4A] child-hover:bg-[#849661] child:border-none text-white child:duration-300'>
-          <button type='submit' className='px-5 py-3' value="all" onClick={(e) => searchFunction(e)}>{t("servicesButton1")}</button>
-          <button type='submit' className='px-5 py-3' value="surgery" onClick={(e) => searchFunction(e)}>{t("servicesButton2")}</button>
-          <button type='submit' className='px-5 py-3' value="general-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton3")}</button>
-          <button type='submit' className='px-5 py-3' value="cosmetic-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton4")}</button>
-          <button type='submit' className='px-5 py-3' value="aesthetic-medicine" onClick={(e) => searchFunction(e)}>{t("servicesButton5")}</button>
+          <button type='submit' className='px-5 py-3 sm:w-full' value="all" onClick={(e) => searchFunction(e)}>{t("servicesButton1")}</button>
+          <button type='submit' className='px-5 py-3 sm:w-full' value="surgery" onClick={(e) => searchFunction(e)}>{t("servicesButton2")}</button>
+          <button type='submit' className='px-5 py-3 sm:w-full' value="general-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton3")}</button>
+          <button type='submit' className='px-5 py-3 sm:w-full' value="cosmetic-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton4")}</button>
+          <button type='submit' className='px-5 py-3 sm:w-full' value="aesthetic-medicine" onClick={(e) => searchFunction(e)}>{t("servicesButton5")}</button>
         </div>
         <div className='grid sm:grid-cols-1 grid-cols-2 gap-5 w-full'>
           {
