@@ -13,8 +13,8 @@ const AboutPageGallery = () => {
     return (
         <ScrollAnimation className='flex w-full justify-center items-center sm:mb-12 md:mb-24 lg:mb-32' animateIn='fadeInTop'>
             <div className='w-full sm:px-5 md:px-16 lg:px-32 '>
-                <p className="text-[#00ACB1] font-bold">{t("aboutGallery")}</p>
-                <p className="sm:text-2xl md:text-4xl lg:text-4xl font-bold text-[#002856] mt-3 mb-10">
+                <p className="text-[#6B7D4A] font-bold">{t("aboutGallery")}</p>
+                <p className="sm:text-2xl md:text-4xl lg:text-4xl font-bold text-[#849661] mt-3 mb-10">
                     <Trans components={{ br: <br className='sm:hidden'/> }}>{t("aboutGalleryTitle")}</Trans>
                 </p>
                 <Swiper

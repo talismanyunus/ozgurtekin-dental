@@ -26,8 +26,8 @@ const ServicesSwiper = () => {
     <ScrollAnimation className='flex w-full flex-col justify-center items-center mb-32' animateIn='fadeInTop'>
       <div className='w-full sm:px-3 md:px-20 lg:px-32'>
         <div className='text-center'>
-          <p className="text-[#00ACB1] font-bold">{t("ourServices")}</p>
-          <p className="sm:text-2xl md:text-4xl lg:text-4xl sm:font-extrabold md:font-extrabold lg:font-bold text-[#002856] mt-3 mb-10">
+          <p className="text-[#6B7D4A] font-bold">{t("ourServices")}</p>
+          <p className="sm:text-2xl md:text-4xl lg:text-4xl sm:font-extrabold md:font-extrabold lg:font-bold text-[#849661] mt-3 mb-10">
             {t("ourServicesTitle")}
           </p>
         </div>
@@ -63,9 +63,9 @@ const ServicesSwiper = () => {
                     src={slide.icon}
                     alt='Service Icon'
                     width={70}
-                    className={`absolute -top-9 left-6 z-10 ${slide.iconPad} rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#00ACB1] border-8 border-white duration-300`}
+                    className={`absolute -top-9 left-6 z-10 ${slide.iconPad} rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#6B7D4A] border-8 border-white duration-300`}
                   />
-                  <p className='pt-10 pb-6 pl-10 text-2xl text-[#002856] font-bold'>
+                  <p className='pt-10 pb-6 pl-10 text-2xl text-[#849661] font-bold'>
                     {t(slide.labelKey)}
                   </p>
                 </div>
@@ -75,7 +75,7 @@ const ServicesSwiper = () => {
         </Swiper>
       </div>
       <Link to="/services">
-        <button type='submit' className='h-16 bg-[#00ACB1] px-20 rounded-lg duration-300 border-none hover:bg-[#002856] text-white mt-10'>
+        <button type='submit' className='h-16 bg-[#6B7D4A] px-20 rounded-lg duration-300 border-none hover:bg-[#849661] text-white mt-10'>
           {t("ourServicesButton")}
         </button>
       </Link>

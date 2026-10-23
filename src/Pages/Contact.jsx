@@ -52,50 +52,50 @@ const Contact = (props) => {
           <p className="text-2xl font-bold">{t("formTitle")}</p>
           <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-5  '>
             {/* Full Name Field */}
-            <input type='text' placeholder={t("formName")} name='Emri Mbiemri' onChange={(e) => nameValidation(e)} className='bg-transparent border-slate-500 border rounded-md pl-3 py-3' required/>
+            <input type='text' placeholder={t("formName")} name='Emri Mbiemri' onChange={(e) => nameValidation(e)} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Email Field */}
-            <input type='email' placeholder={t("formEmail")} name="Adresa Emailit" onChange={(e) => emailValidation(e)} className='bg-transparent border-slate-500 border rounded-md pl-3 py-3' required/>
+            <input type='email' placeholder={t("formEmail")} name="Adresa Emailit" onChange={(e) => emailValidation(e)} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Date Field */}
-            <input type='text' placeholder="Date" name="Data e Takimit" onFocus={(e) => (e.target.type = 'date')} onBlur={(e) => (e.target.type = 'text')} className='bg-transparent border-slate-500 border rounded-md pl-3 py-3' required/>
+            <input type='text' placeholder="Date" name="Data e Takimit" onFocus={(e) => (e.target.type = 'date')} onBlur={(e) => (e.target.type = 'text')} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Time Field */}
-            <input type='text' placeholder={t("formTime")} name="Orari Takimit" onFocus={(e) => (e.target.type = 'time')} onBlur={(e) => (e.target.type = 'text')} className='bg-transparent border-slate-500 border rounded-md pl-3 py-3' required/>
+            <input type='text' placeholder={t("formTime")} name="Orari Takimit" onFocus={(e) => (e.target.type = 'time')} onBlur={(e) => (e.target.type = 'text')} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Category Field */}
             <select onChange={(e) => {
               categoryFilter(e)
               setCategory(e)
-              }} name="Kategoria" className='bg-transparent border-slate-500 border rounded-md pl-3 py-3'required>
+              }} name="Kategoria" className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 text-white'required>
             {
               language === "it"
               ? Array.from(SubCategorysItalian).map(data => (
-                  <option className="text-neutral-500" key={data.category} value={data.category}>{data.category}</option>
+                  <option className="text-neutral-800" key={data.category} value={data.category}>{data.category}</option>
                 ))
               : language === "tr"
               ? Array.from(SubCategorysTurkish).map(data => (
-                  <option className="text-neutral-500" key={data.category} value={data.category}>{data.category}</option>
+                  <option className="text-neutral-800" key={data.category} value={data.category}>{data.category}</option>
                 ))
               : Array.from(SubCategorys).map(data => (
-                  <option className="text-neutral-500" key={data.category} value={data.category}>{data.category}</option>
+                  <option className="text-neutral-800" key={data.category} value={data.category}>{data.category}</option>
                 ))
             }
             </select>
             {/* Service Field */}
-            <select name="Sherbimi" className='bg-transparent border-slate-500 border rounded-md pl-3 py-3' required>
+            <select name="Sherbimi" className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 text-white' required>
               {
                 Array.from(categoryData).map(data => (
-                  <option className='text-neutral-500' key={data} value={data}>{data}</option>
+                  <option className='text-neutral-800' key={data} value={data}>{data}</option>
                 ))
               }
             </select>
           </div>
           <div className='flex flex-col child:mb-5'>
-            <input type='Numri Telefonit' name="Phone Number" placeholder={t("formNumber")} onChange={(e) => numberValidation(e)} className='py-3 pl-3 bg-transparent rounded-md border' width={'20px'} required/>
-            <textarea placeholder={t("formMessage")} name="Mesazhi " rows={4} className='pl-3 py-3 bg-transparent border mb-5 rounded-md border-slate-500'/>
-          <button type='submit' className='h-16 bg-[#00ACB1] border-none hover:bg-white hover:text-black duration-300'>Book Appointment</button>
+            <input type='Numri Telefonit' name="Phone Number" placeholder={t("formNumber")} onChange={(e) => numberValidation(e)} className='py-3 pl-3 bg-white bg-opacity-20 rounded-md border border-white placeholder-white text-white' width={'20px'} required/>
+            <textarea placeholder={t("formMessage")} name="Mesazhi " rows={4} className='pl-3 py-3 bg-white bg-opacity-20 border border-white mb-5 rounded-md placeholder-white text-white'/>
+          <button type='submit' className='h-16 bg-[#6B7D4A] border-none hover:bg-white hover:text-black duration-300'>Book Appointment</button>
           </div>
         </div>
       </form>
       <div>
-        <p className='text-[#00ACB1] font-medium'>{t("locationTitle")}</p>
+        <p className='text-[#6B7D4A] font-medium'>{t("locationTitle")}</p>
         <Maps/>
       </div>
     </div>

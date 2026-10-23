@@ -14,9 +14,9 @@ const ServiceTypes = (props) => {
             {/* First Section */}
             <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
                 <div className="flex flex-col gap-3">
-                    <p className="font-bold text-4xl text-[#002856]">{typeOfService.title}</p>
-                    <p className="font-medium text-[#002856]">
-                        <Link to="/">Home</Link> - <span className="text-[#00ACB1]">{typeOfService.title}</span>
+                    <p className="font-bold text-4xl text-[#849661]">{typeOfService.title}</p>
+                    <p className="font-medium text-[#849661]">
+                        <Link to="/">Home</Link> - <span className="text-[#6B7D4A]">{typeOfService.title}</span>
                     </p>
                 </div>
                 <img
@@ -29,18 +29,18 @@ const ServiceTypes = (props) => {
             <div className='w-full flex sm:flex-col md:flex-col py-10 lg:py-20 sm:gap-10 md:gap-10 sm:px-5 md:px-10 lg:px-28 lg:gap-5'>
                 {/* Filters */}
                 <div className='flex flex-col gap-5 fadeInLeft'>
-                    <div className='flex flex-col child:text-[#002856] child:font-bold child:text-xl gap-5 bg-neutral-100 px-5 py-5 rounded-xl md:child:text-left md:child:pl-5'>
+                    <div className='flex flex-col child:text-[#849661] child:font-bold child:text-xl gap-5 bg-neutral-100 px-5 py-5 rounded-xl md:child:text-left md:child:pl-5'>
                         <p>Blogs Category</p>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#00ACB1] hover:border-l-[#00ACB1]' value="all"><Link to="/services">{t("servicesButton1")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#00ACB1] hover:border-l-[#00ACB1]' value="surgery"><Link to="/services">{t("servicesButton2")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#00ACB1] hover:border-l-[#00ACB1]' value="general-dentistry"><Link to="/services">{t("servicesButton3")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#00ACB1] hover:border-l-[#00ACB1]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton4")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#00ACB1] hover:border-l-[#00ACB1]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton5")}</Link></button>
+                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="all"><Link to="/services">{t("servicesButton1")}</Link></button>
+                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="surgery"><Link to="/services">{t("servicesButton2")}</Link></button>
+                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="general-dentistry"><Link to="/services">{t("servicesButton3")}</Link></button>
+                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton4")}</Link></button>
+                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton5")}</Link></button>
                     </div>
                 </div>
                 {/* Selected Content */}
                 <div className='flex flex-col w-full lg:mr-16 fadeInRight'>
-                    <p className='text-4xl font-bold text-[#002856]'>{typeOfService.title}</p>
+                    <p className='text-4xl font-bold text-[#849661]'>{typeOfService.title}</p>
                     <div className='flex flex-row justify-center sm:w-screen lg:w-2/3 my-10'>
                         <Swiper
                             spaceBetween={10}

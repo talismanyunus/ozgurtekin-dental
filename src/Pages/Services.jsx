@@ -59,9 +59,9 @@ const Services = (props) => {
       {/* First Section */}
       <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
         <div className="flex flex-col gap-3">
-          <p className="font-bold text-4xl text-[#002856]">{t("services")}</p>
-          <p className="font-medium text-[#002856]">
-            <Link to="/">Home</Link> - <span className="text-[#00ACB1]">{t("services")}</span>
+          <p className="font-bold text-4xl text-[#849661]">{t("services")}</p>
+          <p className="font-medium text-[#849661]">
+            <Link to="/">Home</Link> - <span className="text-[#6B7D4A]">{t("services")}</span>
           </p>
         </div>
         <img
@@ -72,7 +72,7 @@ const Services = (props) => {
       </div>
       {/* Second Section */}
       <div className='flex flex-col gap-5 items-center sm:px-5 md:px-10 lg:px-28 sm:py-10 lg:py-24'>
-        <div className='flex sm:flex-col flex-row flex-wrap justify-center gap-3 child:rounded-md child:bg-[#00ACB1] child-hover:bg-[#002856] child:border-none text-white child:duration-300'>
+        <div className='flex sm:flex-col flex-row flex-wrap justify-center gap-3 child:rounded-md child:bg-[#6B7D4A] child-hover:bg-[#849661] child:border-none text-white child:duration-300'>
           <button type='submit' className='px-5 py-3' value="all" onClick={(e) => searchFunction(e)}>{t("servicesButton1")}</button>
           <button type='submit' className='px-5 py-3' value="surgery" onClick={(e) => searchFunction(e)}>{t("servicesButton2")}</button>
           <button type='submit' className='px-5 py-3' value="general-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton3")}</button>
@@ -95,11 +95,11 @@ const Services = (props) => {
                       src={data.icon}
                       width={60}
                       alt={data.title}
-                      className='relative -top-7 left-3 z-10 p-2 rounded-full bg-white shadow shadow-neutral-400 group-hover:bg-[#00ACB1] border-4 border-white duration-300'
+                      className='relative -top-7 left-3 z-10 p-2 rounded-full bg-white shadow shadow-neutral-400 group-hover:bg-[#6B7D4A] border-4 border-white duration-300'
                     />
                     <div className='-mt-4'>
                       <Link to={`/services/${data.id}`} onClick={() => setTypeOfService(data)}>
-                        <p className='text-[#002856] text-xl font-bold pb-3 hover:text-[#00ACB1] duration-200'>{data.title}</p>
+                        <p className='text-[#849661] text-xl font-bold pb-3 hover:text-[#6B7D4A] duration-200'>{data.title}</p>
                       </Link>
                       <p className='text-sm text-neutral-500 line-clamp-2'>{data.subDescription}</p>
                     </div>

@@ -41,9 +41,9 @@ const DentalTourism = () => {
       {/* First Section */}
       <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
         <div className="flex flex-col gap-3">
-          <p className="font-bold text-4xl text-[#002856]">{t("dentalTourism")}</p>
-          <p className="font-medium text-[#002856]">
-            <Link to="/">Home</Link> - <span className="text-[#00ACB1]">{t("dentalTourism")}</span>
+          <p className="font-bold text-4xl text-[#849661]">{t("dentalTourism")}</p>
+          <p className="font-medium text-[#849661]">
+            <Link to="/">Home</Link> - <span className="text-[#6B7D4A]">{t("dentalTourism")}</span>
           </p>
         </div>
         <img
@@ -60,7 +60,7 @@ const DentalTourism = () => {
           className=" lg:w-2/5"
         />
         <div className="items-center  md:px-16">
-          <p className="text-[#002856] sm:text-3xl text-4xl font-bold py-5">
+          <p className="text-[#849661] sm:text-3xl text-4xl font-bold py-5">
             {t("dentalTourismPage")}
           </p>
           <p className="text-md text-neutral-500">
@@ -80,18 +80,18 @@ const DentalTourism = () => {
         </div>
         {/* İçerik */}
         <div className="flex flex-col lg:w-1/2 sm:w-full md:w-full">
-          <p className="text-[#00ACB1] sm:text-sm font-bold">{t("dental")}</p>
-          <div className="child:text-[#002856] child:font-bold sm:child:text-2xl md:child:text-4xl lg:child:text-4xl mt-3 mb-10">
+          <p className="text-[#6B7D4A] sm:text-sm font-bold">{t("dental")}</p>
+          <div className="child:text-[#849661] child:font-bold sm:child:text-2xl md:child:text-4xl lg:child:text-4xl mt-3 mb-10">
             <p>
               <Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("dentalTitle")}</Trans>
             </p>
           </div>
-          <div className="flex sm:flex-col md:flex-col gap-5 z-10 mb-10 child:text-white child:rounded-md child-hover:bg-[#00ACB1] child:px-6 md:child:px-5 child:py-4 md:child:py-2 child:duration-300 md:child:text-2xl">
+          <div className="flex sm:flex-col md:flex-col gap-5 z-10 mb-10 child:text-white child:rounded-md child-hover:bg-[#6B7D4A] child:px-6 md:child:px-5 child:py-4 md:child:py-2 child:duration-300 md:child:text-2xl">
             <button
               type="button"
               id="Family"
               onClick={e => changeButtonStatus(e)}
-              className={button1 ? "bg-[#00ACB1] flex flex-row items-center gap-2" : "bg-[#002856] flex flex-row items-center gap-2"}
+              className={button1 ? "bg-[#6B7D4A] flex flex-row items-center gap-2" : "bg-[#849661] flex flex-row items-center gap-2"}
             >
               <img src={Plane1Icon} alt="Travel 1 Icon"/>
               {t("dentalDropdown1Title")}
@@ -100,7 +100,7 @@ const DentalTourism = () => {
               type="button"
               id="Cosmetic"
               onClick={e => changeButtonStatus(e)}
-              className={button2 ? "bg-[#00ACB1] flex flex-row items-center gap-2" : "bg-[#002856] flex flex-row items-center gap-2"}
+              className={button2 ? "bg-[#6B7D4A] flex flex-row items-center gap-2" : "bg-[#849661] flex flex-row items-center gap-2"}
             >
               <img src={HouseIcon} alt="Accomodation Icon"/>
               {t("dentalDropdown2Title")}
@@ -109,7 +109,7 @@ const DentalTourism = () => {
               type="button"
               id="CheckUps"
               onClick={e => changeButtonStatus(e)}
-              className={button3 ? "bg-[#00ACB1] flex flex-row items-center gap-2" : "bg-[#002856] flex flex-row items-center gap-2"}
+              className={button3 ? "bg-[#6B7D4A] flex flex-row items-center gap-2" : "bg-[#849661] flex flex-row items-center gap-2"}
             >
               <img src={Plane2Icon} alt="Travel 2 Icon"/>
               {t("dentalDropdown3Title")}
@@ -118,7 +118,7 @@ const DentalTourism = () => {
               type="button"
               id="Implants"
               onClick={e => changeButtonStatus(e)}
-              className={button4 ? "bg-[#00ACB1] flex flex-row items-center gap-2" : "bg-[#002856] flex flex-row items-center gap-2"}
+              className={button4 ? "bg-[#6B7D4A] flex flex-row items-center gap-2" : "bg-[#849661] flex flex-row items-center gap-2"}
             >
               <img src={MedIcon} alt="Medical Icon"/>
               {t("dentalDropdown4Title")}
@@ -126,7 +126,7 @@ const DentalTourism = () => {
           </div>
           {/* Button 1 Text */}
           <div className={button1 ? "visible fadeInRight" : "hidden"}>
-            <p className="text-[#002856] font-bold text-xl md:text-3xl mb-4">
+            <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">
               {t("dentalDropdown1Title")}
             </p>
             <p className="text-neutral-500 md:text-xl">
@@ -135,7 +135,7 @@ const DentalTourism = () => {
           </div>
           {/* Button 2 Text */}
           <div className={button2 ? "visible fadeInRight" : "hidden"}>
-            <p className="text-[#002856] font-bold text-xl md:text-3xl mb-4">
+            <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">
               {t("dentalDropdown2Title")}
             </p>
             <p className="text-neutral-500 md:text-xl">
@@ -144,7 +144,7 @@ const DentalTourism = () => {
           </div>
           {/* Button 3 Text */}
           <div className={button3 ? "visible fadeInRight" : "hidden"}>
-            <p className="text-[#002856] font-bold text-xl md:text-3xl mb-4">
+            <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">
               {t("dentalDropdown3Title")}
             </p>
             <p className="text-neutral-500 md:text-xl">
@@ -153,7 +153,7 @@ const DentalTourism = () => {
           </div>
           {/* Button 4 Text */}
           <div className={button4 ? "visible fadeInRight" : "hidden"}>
-            <p className="text-[#002856] font-bold text-xl md:text-3xl mb-4">
+            <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">
               {t("dentalDropdown4Title")}
             </p>
             <p className="text-neutral-500 md:text-xl">
@@ -164,7 +164,7 @@ const DentalTourism = () => {
       </div>
       {/* Countrys Gallery */}
       <ScrollAnimation animateIn="fadeInTop" className="flex flex-col items-center py-10 sm:px-3 md:px-16">
-        <p className="sm:text-2xl text-4xl font-bold text-[#002856] sm:text-center">
+        <p className="sm:text-2xl text-4xl font-bold text-[#849661] sm:text-center">
           {t("dentalGalleryTitle")}
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:px-24 py-14 w-full">
@@ -184,7 +184,7 @@ const DentalTourism = () => {
                 className="w-full h-full object-cover group-hover:scale-105 duration-500 grayscale group-hover:grayscale-0"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
-                <div className="bg-[#002856] px-6 py-2 rounded">
+                <div className="bg-[#849661] px-6 py-2 rounded">
                   <p className="text-2xl font-bold text-white text-center">{item.label}</p>
                 </div>
               </div>

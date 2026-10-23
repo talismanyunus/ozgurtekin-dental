@@ -26,8 +26,8 @@ const GallerySwiper = () => {
   return (
     <ScrollAnimation className='flex w-full justify-center items-center sm:mb-12 md:mb-24 lg:mb-32' animateIn='fadeInTop'>
       <div className='w-full sm:px-3 md:px-16 lg:px-32'>
-        <p className="text-[#00ACB1] font-bold">{t("ourGallery")}</p>
-        <p className="sm:text-2xl md:text-4xl lg:text-4xl font-bold text-[#002856] mt-3 mb-10">
+        <p className="text-[#6B7D4A] font-bold">{t("ourGallery")}</p>
+        <p className="sm:text-2xl md:text-4xl lg:text-4xl font-bold text-[#849661] mt-3 mb-10">
           {t("ourGalleryTitle")} {t("ourGalleryTitle2")}
         </p>
         <Swiper
@@ -54,7 +54,7 @@ const GallerySwiper = () => {
                 />
                 {/* Başlık — normalde görünmez, hover'da aşağıdan kayar */}
                 <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 duration-300 bg-white bg-opacity-90 py-4">
-                  <p className="text-xl font-bold text-[#002856] text-center">
+                  <p className="text-xl font-bold text-[#849661] text-center">
                     {t(img.labelKey)}
                   </p>
                 </div>

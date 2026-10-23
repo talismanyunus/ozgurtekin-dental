@@ -13,14 +13,14 @@ body{
 }
 
 .BackgroundImage{
-    background-image: linear-gradient(rgba(0, 40, 86, 0.9),rgba(0, 40, 86, 0.9)) , url('./assets/booking-form-bg.jpg');
+    background-image: linear-gradient(rgba(132, 150, 97, 0.9),rgba(132, 150, 97, 0.9)) , url('./assets/booking-form-bg.jpg');
     background-position: center;
 }
 
 
 
 .linearBlue{
-    background: linear-gradient(rgba(0, 40, 86, 0.0),rgba(0, 40, 86, 0.7));
+    background: linear-gradient(rgba(132, 150, 97, 0.0),rgba(132, 150, 97, 0.7));
 }
 
 .slide-up{
