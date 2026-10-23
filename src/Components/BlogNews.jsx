@@ -11,11 +11,11 @@ const BlogNews = () => {
     const { t } = useTranslation();
 
     return (    
-        <ScrollAnimation className="flex w-full justify-center items-center sm:mb-20 md:mb-24 lg:mb-32" animateIn="fadeInTop">
+        <ScrollAnimation className="flex w-full justify-center items-center sm:mb-20 md:mb-24 lg:mb-32 overflow-hidden" animateIn="fadeInTop">
             <div className="w-full sm:px-3 md:px-16 lg:px-32">
                 <div>
                     <p className="text-[#6B7D4A] font-bold">{t("blogNews")}</p>
-                    <p className="text-4xl font-bold text-[#849661] mt-3 mb-10">
+                    <p className="text-4xl sm:text-2xl md:text-3xl font-bold text-[#849661] mt-3 mb-10">
                         {t("blogNewsTitle")}
                     </p>
                 </div>
@@ -41,8 +41,8 @@ const BlogNews = () => {
                                 <img src={BlogImages1} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
-                                <div className="flex flex-col pl-8 py-8">
-                                    <Link to="/blogs"><p className='text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription1")}</p></Link>
+                                <div className="flex flex-col sm:pl-4 md:pl-6 lg:pl-8 py-8">
+                                    <Link to="/blogs"><p className='sm:text-lg md:text-xl lg:text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription1")}</p></Link>
                                     <div className="flex flex-row  gap-2 text-center mt-3">
                                         <img src={Calendar} alt="Calendar Icon"/>
                                         <p className="text-base tracking-wider text-neutral-500">06/13/2023 18:02</p>
@@ -57,8 +57,8 @@ const BlogNews = () => {
                                 <img src={BlogImages2} alt="Image 2" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2'>
-                                <div className="flex flex-col pl-8 py-8">
-                                    <Link to="/blogs"><p className='text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription2")}</p></Link>
+                                <div className="flex flex-col sm:pl-4 md:pl-6 lg:pl-8 py-8">
+                                    <Link to="/blogs"><p className='sm:text-lg md:text-xl lg:text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription2")}</p></Link>
                                     <div className="flex flex-row  gap-2 text-center mt-3">
                                         <img src={Calendar} alt="Calendar Icon"/>
                                         <p className="text-base tracking-wider text-neutral-500">06/13/2023 18:05</p>
@@ -73,8 +73,8 @@ const BlogNews = () => {
                                 <img src={BlogImages3} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
-                                <div className="flex flex-col pl-8 py-8">
-                                    <Link to="/blogs"><p className='text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription3")}</p></Link>
+                                <div className="flex flex-col sm:pl-4 md:pl-6 lg:pl-8 py-8">
+                                    <Link to="/blogs"><p className='sm:text-lg md:text-xl lg:text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription3")}</p></Link>
                                     <div className="flex flex-row  gap-2 text-center mt-3">
                                         <img src={Calendar} alt="Calendar Icon"/>
                                         <p className="text-base tracking-wider text-neutral-500">06/13/2022 18:02</p>
@@ -89,8 +89,8 @@ const BlogNews = () => {
                                 <img src={BlogImages1} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
-                                <div className="flex flex-col pl-8 py-8">
-                                    <Link to="/blogs"><p className='text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription1")}</p></Link>
+                                <div className="flex flex-col sm:pl-4 md:pl-6 lg:pl-8 py-8">
+                                    <Link to="/blogs"><p className='sm:text-lg md:text-xl lg:text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription1")}</p></Link>
                                     <div className="flex flex-row  gap-2 text-center mt-3">
                                         <img src={Calendar} alt="Calendar Icon"/>
                                         <p className="text-base tracking-wider text-neutral-500">06/13/2023 18:02</p>
@@ -105,8 +105,8 @@ const BlogNews = () => {
                                 <img src={BlogImages2} alt="Image 2" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2'>
-                                <div className="flex flex-col pl-8 py-8">
-                                    <Link to="/blogs"><p className='text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription2")}</p></Link>
+                                <div className="flex flex-col sm:pl-4 md:pl-6 lg:pl-8 py-8">
+                                    <Link to="/blogs"><p className='sm:text-lg md:text-xl lg:text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription2")}</p></Link>
                                     <div className="flex flex-row  gap-2 text-center mt-3">
                                         <img src={Calendar} alt="Calendar Icon"/>
                                         <p className="text-base tracking-wider text-neutral-500">06/13/2023 18:05</p>
@@ -121,8 +121,8 @@ const BlogNews = () => {
                                 <img src={BlogImages3} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
-                                <div className="flex flex-col pl-8 py-8">
-                                    <Link to="/blogs"><p className='text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription3")}</p></Link>
+                                <div className="flex flex-col sm:pl-4 md:pl-6 lg:pl-8 py-8">
+                                    <Link to="/blogs"><p className='sm:text-lg md:text-xl lg:text-2xl text-[#849661] font-bold pb-3 tracking-wider'>{t("blogNewsDescription3")}</p></Link>
                                     <div className="flex flex-row  gap-2 text-center mt-3">
                                         <img src={Calendar} alt="Calendar Icon"/>
                                         <p className="text-base tracking-wider text-neutral-500">06/13/2022 18:02</p>
@@ -133,7 +133,7 @@ const BlogNews = () => {
                     </SwiperSlide>    
                 </Swiper>
                 <div className="flex justify-center">
-                    <Link to="/blogs"><button type='submit' className='h-16 bg-[#6B7D4A] px-20 rounded-lg duration-300 border-none hover:bg-[#849661] text-white mt-10'>{t("blogNewsButton")}</button></Link>
+                    <Link to="/blogs"><button type='submit' className='h-16 bg-[#6B7D4A] sm:px-8 md:px-12 lg:px-20 rounded-lg duration-300 border-none hover:bg-[#849661] text-white mt-10'>{t("blogNewsButton")}</button></Link>
                 </div>
             </div>
         </ScrollAnimation>
