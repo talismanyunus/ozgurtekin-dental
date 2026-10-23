@@ -10,7 +10,7 @@ const ServiceTypes = (props) => {
     const { t } = useTranslation(); 
     
     return (
-        <div className="w-full flex-col">
+        <div className="w-full flex-col overflow-x-hidden">
             {/* First Section */}
             <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
                 <div className="flex flex-col gap-3">
@@ -31,16 +31,16 @@ const ServiceTypes = (props) => {
                 <div className='flex flex-col gap-5 fadeInLeft'>
                     <div className='flex flex-col child:text-[#849661] child:font-bold child:text-xl gap-5 bg-neutral-100 px-5 py-5 rounded-xl md:child:text-left md:child:pl-5'>
                         <p>Blogs Category</p>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="all"><Link to="/services">{t("servicesButton1")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="surgery"><Link to="/services">{t("servicesButton2")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="general-dentistry"><Link to="/services">{t("servicesButton3")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton4")}</Link></button>
-                        <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton5")}</Link></button>
+                        <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="all"><Link to="/services">{t("servicesButton1")}</Link></button>
+                        <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="surgery"><Link to="/services">{t("servicesButton2")}</Link></button>
+                        <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="general-dentistry"><Link to="/services">{t("servicesButton3")}</Link></button>
+                        <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton4")}</Link></button>
+                        <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry"><Link to="/services">{t("servicesButton5")}</Link></button>
                     </div>
                 </div>
                 {/* Selected Content */}
                 <div className='flex flex-col w-full lg:mr-16 fadeInRight'>
-                    <p className='text-4xl font-bold text-[#849661]'>{typeOfService.title}</p>
+                    <p className='text-4xl sm:text-2xl md:text-3xl font-bold text-[#849661]'>{typeOfService.title}</p>
                     <div className='flex flex-row justify-center w-full lg:w-2/3 my-10'>
                         <Swiper
                             spaceBetween={10}
