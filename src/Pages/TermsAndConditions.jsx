@@ -7,11 +7,11 @@ const TermsAndConditions = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="w-full flex-col">
+        <div className="w-full flex-col overflow-x-hidden">
             {/* First Section */}
             <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
                 <div className="flex flex-col gap-3">
-                    <p className="font-bold text-4xl text-[#849661]">{t("termsConditions")}</p>
+                    <p className="font-bold text-4xl sm:text-2xl md:text-3xl text-[#849661]">{t("termsConditions")}</p>
                     <p className="font-medium text-[#849661]">
                         <Link to="/">Home</Link> - <span className="text-[#6B7D4A]">{t("termsConditions")}</span>
                     </p>
