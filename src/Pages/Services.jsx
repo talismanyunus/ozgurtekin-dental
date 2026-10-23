@@ -79,7 +79,7 @@ const Services = (props) => {
           <button type='submit' className='px-5 py-3 sm:w-full' value="cosmetic-dentistry" onClick={(e) => searchFunction(e)}>{t("servicesButton4")}</button>
           <button type='submit' className='px-5 py-3 sm:w-full' value="aesthetic-medicine" onClick={(e) => searchFunction(e)}>{t("servicesButton5")}</button>
         </div>
-        <div className='grid sm:grid-cols-1 grid-cols-2 gap-5 w-full'>
+        <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 w-full'>
           {
             Array.from(categoryData).map((data) => {
               return (

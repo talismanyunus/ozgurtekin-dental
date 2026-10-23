@@ -50,7 +50,7 @@ const Contact = (props) => {
       <form className='sm:w-full lg:w-[38%]  text-white' action="https://formspree.io/f/mbjevbjr" method="POST">
         <div className='flex flex-col child:mb-5 sm:child:px-3 md:child:px-5 lg:child:px-8 pt-8 BackgroundImage'>
           <p className="text-2xl font-bold">{t("formTitle")}</p>
-          <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-5  '>
+          <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5  '>
             {/* Full Name Field */}
             <input type='text' placeholder={t("formName")} name='Emri Mbiemri' onChange={(e) => nameValidation(e)} className='w-full bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Email Field */}

@@ -127,7 +127,7 @@ const Blog = (props) => {
           </div>
         </ScrollAnimation>
         {/* Filtered Content */}
-        <ScrollAnimation className='grid sm:grid-cols-1 grid-cols-2 gap-10 w-full' animateIn='fadeInRight'>
+        <ScrollAnimation className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 w-full' animateIn='fadeInRight'>
           {
             Array.from(blog).map(data => (
               <div key={data.id} className=' border-r-2 border-slate-100 border-b-2 group'>

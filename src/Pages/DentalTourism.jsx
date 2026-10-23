@@ -57,7 +57,7 @@ const DentalTourism = () => {
         <img
           src={BlogImage1}
           alt="About Image Section 1"
-          className="sm:w-full lg:w-2/5"
+          className="sm:w-full md:w-full lg:w-2/5"
         />
         <div className="items-center sm:px-0 md:px-16">
           <p className="text-[#849661] sm:text-3xl text-4xl font-bold py-5">

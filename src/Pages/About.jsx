@@ -20,16 +20,16 @@ const About = () => {
       </div>
       {/* Get To Know Us */}
       <div className='flex sm:flex-col md:flex-col lg:flex-row sm:items-center md:items-center lg:justify-center sm:gap-10 md:gap-14 lg:gap-28 py-10 sm:px-5 md:px-10 lg:px-28'>
-        <img src={ About1 } alt="About Image Section 1" className='sm:w-3/4 lg:w-2/4'/>
+        <img src={ About1 } alt="About Image Section 1" className='sm:w-3/4 md:w-3/4 lg:w-2/4'/>
         <div className='items-center'>
           <p className='text-[#6B7D4A] font-bold'>{t("getToKnowUs")}</p>
-          <p className='text-[#849661] sm:text-3xl text-4xl font-bold py-5'>{t("aboutUsTitle")}</p>
+          <p className='text-[#849661] sm:text-3xl md:text-4xl lg:text-4xl font-bold py-5'>{t("aboutUsTitle")}</p>
           <p className='text-lg text-neutral-500'><Trans components={{ br: <br className="lg:hidden md:hidden sm:hidden"/>}}>{t("aboutUsDescription")}</Trans></p>
         </div>
       </div>
       {/* More Info */}
       <div className='sm:px-5 md:px-10 lg:px-28 sm:py-10 md:py-16 lg:py-20'>
-        <p className='text-center sm:text-2xl text-4xl font-bold text-[#849661] pb-10 lg:pb-20'>{t("moreInfoTitle")}</p>
+        <p className='text-center sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#849661] pb-10 lg:pb-20'>{t("moreInfoTitle")}</p>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-20'>
           <ScrollAnimation animateIn='fadeInLeft'>
             <p className='text-[#6B7D4A] font-bold mb-5'>{t("moreInfoGroup1Title")}</p>
