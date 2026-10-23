@@ -14,7 +14,7 @@ const ServiceTypes = (props) => {
             {/* First Section */}
             <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
                 <div className="flex flex-col gap-3">
-                    <p className="font-bold text-4xl text-[#849661]">{typeOfService.title}</p>
+                    <p className="font-bold sm:text-2xl text-4xl text-[#849661]">{typeOfService.title}</p>
                     <p className="font-medium text-[#849661]">
                         <Link to="/">Home</Link> - <span className="text-[#6B7D4A]">{typeOfService.title}</span>
                     </p>
@@ -41,12 +41,13 @@ const ServiceTypes = (props) => {
                 {/* Selected Content */}
                 <div className='flex flex-col w-full lg:mr-16 fadeInRight'>
                     <p className='text-4xl font-bold text-[#849661]'>{typeOfService.title}</p>
-                    <div className='flex flex-row justify-center sm:w-screen lg:w-2/3 my-10'>
+                    <div className='flex flex-row justify-center w-full lg:w-2/3 my-10'>
                         <Swiper
                             spaceBetween={10}
                             slidesPerView={1}
                             speed="1000"
                             loop={true}
+                            className="w-full"
                             breakpoints={{
                             767:{
                                 slidesPerView: 3,
@@ -58,32 +59,32 @@ const ServiceTypes = (props) => {
                         >
                             <SwiperSlide>
                                 <div>
-                                    <img src={typeOfService.image} alt="Image 1" draggable="false" className='h-40'/>
+                                    <img src={typeOfService.image} alt="Image 1" draggable="false" className='w-full h-40 object-cover'/>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div>
-                                    <img src={typeOfService.image2} alt="Image 2" draggable="false" className='h-40'/>
+                                    <img src={typeOfService.image2} alt="Image 2" draggable="false" className='w-full h-40 object-cover'/>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div>
-                                    <img src={typeOfService.image3} alt="Image 3" draggable="false" className='h-40'/>
+                                    <img src={typeOfService.image3} alt="Image 3" draggable="false" className='w-full h-40 object-cover'/>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div>
-                                    <img src={typeOfService.image4} alt="Image 4" draggable="false" className='h-40'/>
+                                    <img src={typeOfService.image4} alt="Image 4" draggable="false" className='w-full h-40 object-cover'/>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div>
-                                    <img src={typeOfService.image} alt="Image 5" draggable="false" className='h-40'/>
+                                    <img src={typeOfService.image} alt="Image 5" draggable="false" className='w-full h-40 object-cover'/>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div>
-                                    <img src={typeOfService.image2} alt="Image 6" draggable="false" className='h-40'/>
+                                    <img src={typeOfService.image2} alt="Image 6" draggable="false" className='w-full h-40 object-cover'/>
                                 </div>
                             </SwiperSlide>
                         </Swiper>

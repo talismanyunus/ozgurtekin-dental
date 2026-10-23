@@ -71,7 +71,7 @@ const Navbar = (props) => {
                     <button type="button" className="bg-[#849661] w-[14%] h-3/5 text-white rounded-md hover:bg-[#6B7D4A] duration-300 sm:hidden md:hidden"><Link to="/free-quote">{t("navbarButton")}</Link></button>
                 </div>
                 <div className="lg:hidden w-full">
-                    <div className={(menu) ? "bg-white closeEffect z-20" : "bg-white openEffect z-20"}>
+                    <div className={(menu) ? "bg-white closeEffect z-20" : "bg-white openEffect z-20 pb-5"}>
                         <ul className="child:font-bold child:pt-7 sm:pl-5 md:pl-12 child:tracking-wider">
                             <li><Link to="/" onClick={() => setMenu(!menu)} className={location.pathname === "/" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("home")}</Link></li>
                             <li><Link to="/about" onClick={() => setMenu(!menu)} className={location.pathname === "/about" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("about")}</Link></li>

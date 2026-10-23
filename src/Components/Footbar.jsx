@@ -10,7 +10,7 @@ const Footbar = () => {
     <div className='w-full bg-[#849661]'>
         <div className='sm:flex sm:flex-col md:grid md:grid-cols-2 md:gap-12 lg:flex lg:flex-row justify-evenly sm:py-10 md:py-12 sm:px-3 md:px-16 lg:pt-20'>
             <div className='child:text-white items-center'>
-                <img src={Logo3} alt='Logo' className='mb-5 w-72'/>
+                <img src={Logo3} alt='Logo' className='mb-5 sm:w-48 md:w-56 lg:w-72'/>
                 <p><Trans components={{ br: <br className='sm:hidden md:hidden'/>}}>{t("footbarDescription1")}</Trans></p>
             </div>
             <div className='sm:mt-5'>

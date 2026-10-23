@@ -94,7 +94,7 @@ const Contact = (props) => {
           </div>
         </div>
       </form>
-      <div>
+      <div className='w-full sm:w-full'>
         <p className='text-[#6B7D4A] font-medium'>{t("locationTitle")}</p>
         <Maps/>
       </div>

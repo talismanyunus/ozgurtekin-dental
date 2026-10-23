@@ -102,7 +102,7 @@ const Blog = (props) => {
       {/* First Section */}
       <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
         <div className="flex flex-col gap-3">
-          <p className="font-bold text-4xl text-[#849661]">{t("blog")}</p>
+          <p className="font-bold sm:text-2xl text-4xl text-[#849661]">{t("blog")}</p>
           <p className="font-medium text-[#849661]">
             <Link to="/">Home</Link> - <span className="text-[#6B7D4A]">{t("blog")}</span>
           </p>
@@ -131,8 +131,8 @@ const Blog = (props) => {
           {
             Array.from(blog).map(data => (
               <div key={data.id} className=' border-r-2 border-slate-100 border-b-2 group'>
-                <div className='overflow-hidden'>
-                  <img src={data.coverImage} alt="Image 2" className='group-hover:scale-110 duration-300 group-hover:rotate-2'/>
+                <div className='overflow-hidden h-52'>
+                  <img src={data.coverImage} alt="Image 2" className='w-full h-full object-cover group-hover:scale-110 duration-300 group-hover:rotate-2'/>
                 </div>
                 <img src={data.icon} width={70} className='relative bottom-9 left-5 z-10 p-1 rounded-full bg-white shadow shadow-neutral-500 group-hover:bg-[#6B7D4A] border-8 border-white duration-500 '/>
                 <div className='px-5 pb-5  border-r-2 border-slate-100 border-b-2'>
@@ -146,13 +146,13 @@ const Blog = (props) => {
       </div>
       {/* Third Section */}
       <ScrollAnimation className='flex sm:flex-col md:flex-col lg:flex-row justify-center lg:py-20 gap-6 sm:px-5 md:px-10 lg:px-28' animateIn='fadeInTop'>
-        <img src={BlogInfoImage} height={600} alt="Blog More Info Image" className='object-center sm:h-[300px] h-[500px]'/>
+        <img src={BlogInfoImage} height={600} alt="Blog More Info Image" className='w-full object-cover sm:h-[300px] h-[500px]'/>
         <div className='flex flex-col gap-3'>
           <p className='text-[#6B7D4A] font-bold'>{t("blogPage")}</p>
           <p className='text-4xl font-bold text-[#849661]'>{t("blogPageTitle")}</p>
           <div className='duration-500 child:mb-5'>
             {/* Question 1 */}
-            <div className={(showMoreInfo1) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden " : "border border-[#6B7D4A] p-5 rounded-xl sm:h-28 md:h-16 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
+            <div className={(showMoreInfo1) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden " : "border border-[#6B7D4A] p-5 rounded-xl sm:h-auto sm:max-h-16 md:h-16 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
               <button type="button" className='pb-3 text-[#849661] text-xl font-bold text-left mb-5 flex flex-row justify-between w-full' id="question 1">{t("blogPageQuestion1Title")}<img src={(!showMoreInfo1) ? PlusIcon : MinusIcon} alt="plus Icon" className='ml-3'/></button>
               <div className='text-neutral-500'>
                 <ol className='list-disc list-inside'>
@@ -166,7 +166,7 @@ const Blog = (props) => {
               </div>
             </div>
             {/* Question 2 */}
-            <div className={(showMoreInfo2) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden " : "border border-[#6B7D4A] p-5 rounded-xl sm:h-28 md:h-16 h-24 overflow-hidden "} onClick={(e) => questionStateCheck(e)}>
+            <div className={(showMoreInfo2) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden " : "border border-[#6B7D4A] p-5 rounded-xl sm:h-auto sm:max-h-16 md:h-16 h-24 overflow-hidden "} onClick={(e) => questionStateCheck(e)}>
               <button type="button" className='text-[#849661] pb-3 text-xl font-bold text-left mb-5 flex flex-row justify-between w-full' id="question 2"><Trans components={{ br: <br className='md:hidden'/>}}>{t("blogPageQuestion2Title")}</Trans><img src={(!showMoreInfo2) ? PlusIcon : MinusIcon} alt="plus Icon" className='ml-3'/></button>
               <div className='text-neutral-500'>
                 <ol className='list-inside list-disc'>

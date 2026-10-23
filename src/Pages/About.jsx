@@ -13,7 +13,7 @@ const About = () => {
       {/* First Section */}
       <div className='flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center'>
         <div className='flex flex-col gap-3'>
-          <p className='font-bold text-4xl text-[#849661]'>{t("dentalTourism")}</p>
+          <p className='font-bold sm:text-2xl text-4xl text-[#849661]'>{t("dentalTourism")}</p>
           <p className='font-medium text-[#849661]'><Link to="/">Home</Link> - <span className='text-[#6B7D4A]'>{t("dentalTourism")}</span></p>
         </div>
         <img src={AboutImg} alt="About Img" className='sm:w-24 md:w-36 lg:w-40'/>
@@ -30,7 +30,7 @@ const About = () => {
       {/* More Info */}
       <div className='sm:px-5 md:px-10 lg:px-28 py-20'>
         <p className='text-center sm:text-2xl text-4xl font-bold text-[#849661] pb-10 lg:pb-20'>{t("moreInfoTitle")}</p>
-        <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20'>
+        <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-20'>
           <ScrollAnimation animateIn='fadeInLeft'>
             <p className='text-[#6B7D4A] font-bold mb-5'>{t("moreInfoGroup1Title")}</p>
             <p className='text-neutral-500'>{t("moreInfoGroup1Description")}</p>

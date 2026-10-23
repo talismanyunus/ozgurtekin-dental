@@ -38,7 +38,7 @@ const BlogNews = () => {
                     <SwiperSlide>
                         <div className='border-r-2 border-slate-100 border-b-2 group '>
                             <div className="overflow-hidden">
-                                <img src={BlogImages1} alt="Image 1" draggable="false" className="group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
+                                <img src={BlogImages1} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
                                 <div className="flex flex-col pl-8 py-8">
@@ -54,7 +54,7 @@ const BlogNews = () => {
                     <SwiperSlide>
                         <div className='border-r-2 border-slate-100 border-b-2 group '>
                             <div className="overflow-hidden">
-                                <img src={BlogImages2} alt="Image 2" draggable="false" className="group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
+                                <img src={BlogImages2} alt="Image 2" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2'>
                                 <div className="flex flex-col pl-8 py-8">
@@ -70,7 +70,7 @@ const BlogNews = () => {
                     <SwiperSlide>
                         <div className='border-r-2 border-slate-100 border-b-2 group '>
                             <div className="overflow-hidden">
-                                <img src={BlogImages3} alt="Image 1" draggable="false" className="group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
+                                <img src={BlogImages3} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
                                 <div className="flex flex-col pl-8 py-8">
@@ -86,7 +86,7 @@ const BlogNews = () => {
                     <SwiperSlide>
                         <div className='border-r-2 border-slate-100 border-b-2 group '>
                             <div className="overflow-hidden">
-                                <img src={BlogImages1} alt="Image 1" draggable="false" className="group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
+                                <img src={BlogImages1} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
                                 <div className="flex flex-col pl-8 py-8">
@@ -102,7 +102,7 @@ const BlogNews = () => {
                     <SwiperSlide>
                         <div className='border-r-2 border-slate-100 border-b-2 group '>
                             <div className="overflow-hidden">
-                                <img src={BlogImages2} alt="Image 2" draggable="false" className="group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
+                                <img src={BlogImages2} alt="Image 2" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2'>
                                 <div className="flex flex-col pl-8 py-8">
@@ -118,7 +118,7 @@ const BlogNews = () => {
                     <SwiperSlide>
                         <div className='border-r-2 border-slate-100 border-b-2 group '>
                             <div className="overflow-hidden">
-                                <img src={BlogImages3} alt="Image 1" draggable="false" className="group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
+                                <img src={BlogImages3} alt="Image 1" draggable="false" className="w-full h-52 object-cover group-hover:rotate-6 group-hover:scale-110 duration-1000"/>
                             </div>
                             <div className='border-r-2 border-slate-100 border-b-2 '>
                                 <div className="flex flex-col pl-8 py-8">
