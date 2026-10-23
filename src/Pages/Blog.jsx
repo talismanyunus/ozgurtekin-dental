@@ -98,7 +98,7 @@ const Blog = (props) => {
 
 
   return (
-    <div className="w-full flex-col">
+    <div className="w-full flex-col overflow-x-hidden">
       {/* First Section */}
       <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
         <div className="flex flex-col gap-3">
@@ -119,15 +119,15 @@ const Blog = (props) => {
         <ScrollAnimation className='flex flex-col gap-5' animateIn='fadeInLeft'>
           <div className='flex flex-col child:text-[#849661] child:font-bold child:text-xl gap-5 bg-neutral-100 px-5 py-5 rounded-xl md:child:text-left md:child:pl-5'>
             <p>Blogs Category</p>
-            <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="all" onClick={(e) => filterFunction(e)}>{t("servicesButton1")}</button>
-            <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="surgery" onClick={(e) => filterFunction(e)}>{t("servicesButton2")}</button>
-            <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="general-dentistry" onClick={(e) => filterFunction(e)}>{t("servicesButton3")}</button>
-            <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry" onClick={(e) => filterFunction(e)}>{t("servicesButton4")}</button>
-            <button type='button' className='bg-white lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="aesthetic-medicine" onClick={(e) => filterFunction(e)}>{t("servicesButton5")}</button>
+            <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="all" onClick={(e) => filterFunction(e)}>{t("servicesButton1")}</button>
+            <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="surgery" onClick={(e) => filterFunction(e)}>{t("servicesButton2")}</button>
+            <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="general-dentistry" onClick={(e) => filterFunction(e)}>{t("servicesButton3")}</button>
+            <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="cosmetic-dentistry" onClick={(e) => filterFunction(e)}>{t("servicesButton4")}</button>
+            <button type='button' className='bg-white w-full lg:w-80 border py-2 hover:translate-x-1 duration-500 rounded-xl hover:border-l-[5px] hover:text-[#6B7D4A] hover:border-l-[#6B7D4A]' value="aesthetic-medicine" onClick={(e) => filterFunction(e)}>{t("servicesButton5")}</button>
           </div>
         </ScrollAnimation>
         {/* Filtered Content */}
-        <ScrollAnimation className='grid sm:grid-cols-1 grid-cols-2 gap-10' animateIn='fadeInRight'>
+        <ScrollAnimation className='grid sm:grid-cols-1 grid-cols-2 gap-10 w-full' animateIn='fadeInRight'>
           {
             Array.from(blog).map(data => (
               <div key={data.id} className=' border-r-2 border-slate-100 border-b-2 group'>
@@ -145,11 +145,11 @@ const Blog = (props) => {
         </ScrollAnimation>
       </div>
       {/* Third Section */}
-      <ScrollAnimation className='flex sm:flex-col md:flex-col lg:flex-row justify-center lg:py-20 gap-6 sm:px-5 md:px-10 lg:px-28' animateIn='fadeInTop'>
+      <ScrollAnimation className='flex sm:flex-col md:flex-col lg:flex-row justify-center lg:py-20 gap-6 sm:px-5 md:px-10 lg:px-28 w-full' animateIn='fadeInTop'>
         <img src={BlogInfoImage} height={600} alt="Blog More Info Image" className='w-full object-cover sm:h-[300px] h-[500px]'/>
         <div className='flex flex-col gap-3'>
           <p className='text-[#6B7D4A] font-bold'>{t("blogPage")}</p>
-          <p className='text-4xl font-bold text-[#849661]'>{t("blogPageTitle")}</p>
+          <p className='text-4xl sm:text-2xl md:text-3xl font-bold text-[#849661]'>{t("blogPageTitle")}</p>
           <div className='duration-500 child:mb-5'>
             {/* Question 1 */}
             <div className={(showMoreInfo1) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden " : "border border-[#6B7D4A] p-5 rounded-xl sm:h-auto sm:max-h-16 md:h-16 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
@@ -180,28 +180,28 @@ const Blog = (props) => {
               </div>
             </div>
             {/* Question 3 */}
-            <div className={(showMoreInfo3) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-24 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
+            <div className={(showMoreInfo3) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-auto sm:max-h-16 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
               <button type="button" className='text-[#849661] pb-3 text-xl font-bold text-left mb-5 flex flex-row justify-between w-full' id="question 3">{t("blogPageQuestion3Title")}<img src={(!showMoreInfo3) ? PlusIcon : MinusIcon} alt="plus Icon"/></button>
               <div className='text-neutral-500'>
                 <p className='leading-7'>{t("blogPageQuestion3Description1")}</p>
               </div>
             </div>
             {/* Question 4 */}
-            <div className={(showMoreInfo4) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-24 h-16 md:h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
+            <div className={(showMoreInfo4) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-auto sm:max-h-16 h-16 md:h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
               <button type="button" className='text-[#849661] pb-3 text-xl font-bold text-left mb-5 flex flex-row justify-between w-full' id="question 4">{t("blogPageQuestion4Title")} <img src={(!showMoreInfo4) ? PlusIcon : MinusIcon} alt="plus Icon"/></button>
               <div className='text-neutral-500'>
                 <p className='leading-7'>{t("blogPageQuestion4Description1")}</p>
               </div>
             </div>
             {/* Question 5 */}
-            <div className={(showMoreInfo5) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-24 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
+            <div className={(showMoreInfo5) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-auto sm:max-h-16 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
               <button type="button" className='text-[#849661] pb-3 text-xl font-bold text-left mb-5 flex flex-row justify-between w-full' id="question 5">{t("blogPageQuestion5Title")}<img src={(!showMoreInfo5) ? PlusIcon : MinusIcon} alt="plus Icon"/></button>
               <div className='text-neutral-500'>
                 <p className='leading-7'><Trans components={{ br: <br/> }}>{t("blogPageQuestion5Description1")}</Trans></p>
               </div>
             </div>
             {/* Question 6 */}
-            <div className={(showMoreInfo6) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-24 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
+            <div className={(showMoreInfo6) ? "border border-[#6B7D4A] p-5 rounded-xl h-fit overflow-hidden" : "border border-[#6B7D4A] p-5 rounded-xl sm:h-auto sm:max-h-16 h-16 overflow-hidden"} onClick={(e) => questionStateCheck(e)}>
               <button type="button" className='text-[#849661] text-xl pb-3 font-bold text-left mb-5 flex flex-row justify-between w-full' id="question 6">{t("blogPageQuestion6Title")}<img src={(!showMoreInfo6) ? PlusIcon : MinusIcon} alt="plus Icon"/></button>
               <div className='text-neutral-500'>
                 <p className='leading-7'><Trans>{t("blogPageQuestion6Description1")}</Trans></p>
