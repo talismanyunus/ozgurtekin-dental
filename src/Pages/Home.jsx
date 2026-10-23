@@ -44,7 +44,7 @@ const Home = (props) => {
   
   
   return (
-    <div> 
+    <div className="overflow-x-hidden"> 
       {/* Pagination */}
       <AliceCarousel
         mouseTracking
@@ -67,42 +67,42 @@ const Home = (props) => {
         }}
       >
         {/* Slide 1 */}
-        <div className="sm:h-[415px] md:h-[500px] lg:w-full">
+        <div className="relative overflow-hidden sm:h-[415px] md:h-[500px] lg:h-[600px] lg:w-full">
           <img src={Slide1} onDragStart={handleDragStart} alt="Slide 1" role="presentation" className="md:w-full blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full  sm:object-cover md:object-center"/>
-          <div className="scrollLeft absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-full md:w-full bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
+          <div className="scrollLeft absolute left-0 top-0 bottom-0 w-full lg:w-1/2 bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">
               <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br className="sm:hidden"/> }}>{t("homeCarousel1")}</Trans> </p>
               <p className="sm:mt-5 md:mt-7 font-bold lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 capitalize"><Trans components={{ br: <br className="sm:hidden"/> }}>{t("carouselAbout1")}</Trans></p>
-              <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 sm:py-3 md:py-5 lg:py-4 mt-5 lg:mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
+              <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 max-w-full sm:py-3 md:py-5 lg:py-4 mt-5 lg:mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
             </div>
           </div>
         </div>
         {/* Slide 2 */}
-        <div className="sm:h-[415px] md:h-[500px] lg:w-full">
+        <div className="relative overflow-hidden sm:h-[415px] md:h-[500px] lg:h-[600px] lg:w-full">
           <img src={Slide2} onDragStart={handleDragStart} alt="Slide 2" role="presentation" className="md:w-full blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full sm:object-cover md:object-center"/>
-          <div className="absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-full md:w-full bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
+          <div className="absolute left-0 top-0 bottom-0 w-full lg:w-1/2 bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">              
               <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:-mt-5 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br className="sm:hidden"/>}}>{t("homeCarousel2")}</Trans></p>
               <p className="sm:mt-5 md:mt-7 lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 font-bold capitalize"><Trans components={{ br: <br/> }}>{t("carouselAbout2")}</Trans></p>
-              <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 sm:py-3 md:py-5 lg:py-4 mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
+              <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 max-w-full sm:py-3 md:py-5 lg:py-4 mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
             </div>
           </div>
         </div>
         {/* Slide 3 */}
-        <div className="sm:h-[415px] md:h-[500px] lg:w-full">
+        <div className="relative overflow-hidden sm:h-[415px] md:h-[500px] lg:h-[600px] lg:w-full">
           <img src={Slide3} onDragStart={handleDragStart} alt="Slide 3" role="presentation" className="blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full sm:object-cover md:w-full"/>
-          <div className="absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-full md:w-full bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
+          <div className="absolute left-0 top-0 bottom-0 w-full lg:w-1/2 bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">              
               <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br/> }}>{t("homeCarousel3")}</Trans></p>
               <p className="sm:mt-5 font-bold md:mt-7 lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 capitalize"><Trans components={{ br: <br/> }}>{t("carouselAbout3")}</Trans></p>
-              <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 sm:py-3 md:py-5 lg:py-4 mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
+              <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 max-w-full sm:py-3 md:py-5 lg:py-4 mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
             </div>
           </div>
         </div>
       </AliceCarousel>
       {/* About Us */}
       <div className="flex sm:flex-col md:flex-col justify-center w-full my-20">
-        <ScrollAnimation className="flex flex-col lg:w-1/2 lg:-mr-16 sm:mb-10 md:mb-12" animateIn="fadeInLeft">  
+        <ScrollAnimation className="flex flex-col lg:w-1/2 lg:-mr-16 sm:mb-10 md:mb-12 sm:relative sm:min-h-[280px]" animateIn="fadeInLeft">  
           <div className="absolute">
             <img src={About2} alt="About Image 2"  className="relative sm:-top-20 md:-top-20 lg:top-0 sm:left-1 md:left-16 lg:left-2 sm:w-1/2 md:w-5/6 lg:w-3/4 border-8 border-white"/>
             <div className="relative sm:bottom-5 md:bottom-1 sm:left-2 md:left-16 sm:shrink lg:top-12  bg-[#849661] text-white text-center md:py-5 lg:py-5 md:w-2/3 lg:w-2/3 sm:py-1 sm:w-1/2">
@@ -117,7 +117,7 @@ const Home = (props) => {
         <ScrollAnimation animateIn="fadeInRight">
         <div className="flex flex-col justify-center  sm:pl-5 md:pl-16 sm:pr-5 md:pr-20">
           <p className="text-[#6B7D4A] font-bold">{t("getToKnowUs")}</p>
-          <p className="text-3xl md:text-5xl text-[#849661] font-bold my-4">{t("aboutUsTitle")}</p>
+          <p className="text-3xl sm:text-2xl md:text-5xl text-[#849661] font-bold my-4">{t("aboutUsTitle")}</p>
           <div className="child:my-2 text-neutral-500">
             <p className="md:text-xl leading-8"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("aboutUsDescription")}</Trans></p>
           </div>
@@ -139,7 +139,7 @@ const Home = (props) => {
           <div className="child:text-[#849661] child:font-bold sm:child:text-2xl md:child:text-4xl lg:child:text-4xl mt-3 mb-10">
             <p><Trans components={{ br: <br className="md:hidden sm:hidden"/> }}>{t("dropDownsTitle1")}</Trans></p>
           </div>
-          <div className="flex sm:flex-col md:flex-col gap-5 z-10 mb-10 child:text-white child:rounded-md child-hover:bg-[#6B7D4A] child:px-6 md:child:px-5 child:py-4 md:child:py-4 child:duration-300 md:child:text-2xl">
+          <div className="flex sm:flex-col md:flex-col gap-5 z-10 mb-10 child:text-white child:rounded-md child-hover:bg-[#6B7D4A] child:px-6 md:child:px-5 child:py-4 md:child:py-4 child:duration-300">
             <button type="button" id="Family" onClick={(e) => changeButtonStatus(e)} className={(button1) ? "bg-[#6B7D4A] flex flex-row gap-2 items-center" : "bg-[#849661] flex flex-row gap-2 items-center"}>
               <img src={MedIcon} width={30} alt="Button 1 Icon"/>
               {t("button1")}
