@@ -9,7 +9,7 @@ const About = () => {
   const { t } = useTranslation()
 
   return (
-    <div className='w-full flex-col'>
+    <div className='w-full flex-col overflow-x-hidden'>
       {/* First Section */}
       <div className='flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center'>
         <div className='flex flex-col gap-3'>
@@ -28,7 +28,7 @@ const About = () => {
         </div>
       </div>
       {/* More Info */}
-      <div className='sm:px-5 md:px-10 lg:px-28 py-20'>
+      <div className='sm:px-5 md:px-10 lg:px-28 sm:py-10 md:py-16 lg:py-20'>
         <p className='text-center sm:text-2xl text-4xl font-bold text-[#849661] pb-10 lg:pb-20'>{t("moreInfoTitle")}</p>
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:gap-20'>
           <ScrollAnimation animateIn='fadeInLeft'>
