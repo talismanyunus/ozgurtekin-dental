@@ -24,8 +24,8 @@ const Navbar = (props) => {
         <div className="flex flex-col justify-center items-center sticky top-0 overflow-y-hidden sm:z-50 md:z-50 lg:z-50">
             {/* First Navbar */}
             <div className="flex sm:flex-col lg:flex-row lg:justify-around sm:py-3 md:py-5 sm:justify-center md:justify-around  items-center lg:h-[3.5rem] bg-[#849661] w-full text-white text-xs">
-                <div className="lg:flex lg:flex-row md:grid md:grid-cols-2 child:items-center  lg:divide-x lg:divide-slate-400 child:tracking-widest">
-                    <a href="tel:+905078788507"><p className="flex flex-row justify-center gap-2 md:pr-3 lg:pr-7 md:border-r ">
+                <div className="lg:flex lg:flex-row md:grid md:grid-cols-2 sm:flex sm:flex-col sm:gap-1 sm:items-center child:items-center lg:divide-x lg:divide-slate-400 child:tracking-widest">
+                    <a href="tel:+905078788507"><p className="flex flex-row justify-center gap-2 md:pr-3 lg:pr-7 md:border-r">
                         <img src={PhoneCallIcon} alt="Phone Icon" />
                         0507 878 85 07
                     </p></a>
@@ -33,12 +33,12 @@ const Navbar = (props) => {
                         <img src={EmailIcon} alt="Email Icon" />
                         info@ozgurtekin.com
                     </p></a>
-                    <p className="flex flex-row justify-center md:justify-start gap-2 lg:pl-7 md:pt-2 md:col-span-2 ">
+                    <p className="flex flex-row justify-center md:justify-start gap-2 lg:pl-7 md:pt-2 md:col-span-2 sm:hidden">
                         <img src={Clock} alt="Clock Icon" />
                         {t("week")}: 09:00 - 18:00
                     </p>
                 </div>
-                <div className="flex flex-row divide-x sm:justify-center sm:pt-3">
+                <div className="flex flex-row divide-x sm:justify-center sm:pt-2">
                     <p className="flex flex-row items-center gap-2 lg:pl-10 lg:pr-8 sm:pr-2 md:pr-3">
                         <img src={Language} alt="Language Icon" style={{ height: "20px"}}/>
                         <select id="language" defaultValue={defaultLang} className="text-white border-none bg-transparent child:text-black" onChange={(e) => languageChange(e)}>
@@ -58,7 +58,7 @@ const Navbar = (props) => {
             {/* Second Navbar */}
             <div className="bg-white w-full lg:h-[88px] sm:py-3 md:py-3">
                 <div className="flex lg:justify-evenly sm:justify-between md:justify-between sm:mx-5 md:mx-10 h-full items-center z-30 text-[#849661]">
-                    <img src={Logo2} alt="Logo" className="lg:w-52 md:w-40 sm:w-28"/>
+                    <img src={Logo2} alt="Logo" className="lg:w-52 md:w-40 sm:w-24"/>
                     <img src={Menu} alt="Menu" className="lg:hidden" onClick={() => setMenu(!menu)}/>
                     <ul className="flex flex-row gap-10 tracking-wide font-bold sm:hidden md:hidden">
                         <Link to="/"><li className={location.pathname === "/" ? "text-[#6B7D4A]" : ""}>{t("home")}</li></Link>

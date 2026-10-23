@@ -69,7 +69,7 @@ const Home = (props) => {
         {/* Slide 1 */}
         <div className="sm:h-[415px] md:h-[500px] lg:w-full">
           <img src={Slide1} onDragStart={handleDragStart} alt="Slide 1" role="presentation" className="md:w-full blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full  sm:object-cover md:object-center"/>
-          <div className="scrollLeft absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-screen md:w-screen bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
+          <div className="scrollLeft absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-full md:w-full bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">
               <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br className="sm:hidden"/> }}>{t("homeCarousel1")}</Trans> </p>
               <p className="sm:mt-5 md:mt-7 font-bold lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 capitalize"><Trans components={{ br: <br className="sm:hidden"/> }}>{t("carouselAbout1")}</Trans></p>
@@ -80,7 +80,7 @@ const Home = (props) => {
         {/* Slide 2 */}
         <div className="sm:h-[415px] md:h-[500px] lg:w-full">
           <img src={Slide2} onDragStart={handleDragStart} alt="Slide 2" role="presentation" className="md:w-full blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full sm:object-cover md:object-center"/>
-          <div className="absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-screen md:w-screen bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
+          <div className="absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-full md:w-full bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">              
               <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:-mt-5 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br className="sm:hidden"/>}}>{t("homeCarousel2")}</Trans></p>
               <p className="sm:mt-5 md:mt-7 lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 font-bold capitalize"><Trans components={{ br: <br/> }}>{t("carouselAbout2")}</Trans></p>
@@ -91,7 +91,7 @@ const Home = (props) => {
         {/* Slide 3 */}
         <div className="sm:h-[415px] md:h-[500px] lg:w-full">
           <img src={Slide3} onDragStart={handleDragStart} alt="Slide 3" role="presentation" className="blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full sm:object-cover md:w-full"/>
-          <div className="absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-screen md:w-screen bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
+          <div className="absolute left-0 top-0 bottom-0 lg:w-1/2 sm:w-full md:w-full bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">              
               <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br/> }}>{t("homeCarousel3")}</Trans></p>
               <p className="sm:mt-5 font-bold md:mt-7 lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 capitalize"><Trans components={{ br: <br/> }}>{t("carouselAbout3")}</Trans></p>
