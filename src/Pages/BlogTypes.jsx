@@ -7,11 +7,11 @@ const BlogTypes = props => {
     const {blogType} = props
 
     return (
-        <div className="w-full flex-col">
+        <div className="w-full flex-col overflow-x-hidden">
             {/* First Section */}
             <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
                 <div className="flex flex-col gap-3">
-                    <p className="font-bold text-4xl text-[#849661]">{blogType.title}</p>
+                    <p className="font-bold text-4xl sm:text-2xl md:text-3xl text-[#849661]">{blogType.title}</p>
                     <p className="font-medium text-[#849661]">
                         <Link to="/">Home - </Link>
                         <span className="text-[#6B7D4A]">{blogType.title}</span>
@@ -25,8 +25,8 @@ const BlogTypes = props => {
             </div>
             {/* Selected Content */}
             <div className="w-full flex sm:flex-col md:flex-col lg:flex-col py-10 lg:py-20 sm:gap-10 md:gap-10 sm:px-5 md:px-10 lg:px-28 lg:gap-5">
-                <p className="text-4xl font-bold text-[#849661]">{blogType.title}</p>
-                <div className="flex flex-row justify-center  my-10">
+                <p className="text-4xl sm:text-2xl md:text-3xl font-bold text-[#849661]">{blogType.title}</p>
+                <div className="w-full my-10">
                     <Swiper
                         spaceBetween={10}
                         slidesPerView={1}
@@ -47,7 +47,7 @@ const BlogTypes = props => {
                                 src={blogType.image}
                                 alt="Image 1"
                                 draggable="false"
-                                className=""
+                                className="w-full h-52 object-cover"
                             />
                             </div>
                         </SwiperSlide>
@@ -57,7 +57,7 @@ const BlogTypes = props => {
                                 src={blogType.image2}
                                 alt="Image 2"
                                 draggable="false"
-                                className=""
+                                className="w-full h-52 object-cover"
                                 />
                             </div>
                         </SwiperSlide>
@@ -67,7 +67,7 @@ const BlogTypes = props => {
                                 src={blogType.image3}
                                 alt="Image 3"
                                 draggable="false"
-                                className=""
+                                className="w-full h-52 object-cover"
                                 />
                             </div>
                         </SwiperSlide>
@@ -77,7 +77,7 @@ const BlogTypes = props => {
                                 src={blogType.image4}
                                 alt="Image 4"
                                 draggable="false"
-                                className=""
+                                className="w-full h-52 object-cover"
                                 />
                             </div>
                         </SwiperSlide>
@@ -87,7 +87,7 @@ const BlogTypes = props => {
                                 src={blogType.image}
                                 alt="Image 5"
                                 draggable="false"
-                                className=""
+                                className="w-full h-52 object-cover"
                                 />
                             </div>
                         </SwiperSlide>
@@ -97,7 +97,7 @@ const BlogTypes = props => {
                                 src={blogType.image2}
                                 alt="Image 6"
                                 draggable="false"
-                                className=""
+                                className="w-full h-52 object-cover"
                                 />
                             </div>
                         </SwiperSlide>
