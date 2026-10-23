@@ -89,7 +89,7 @@ const ServiceTypes = (props) => {
                             </SwiperSlide>
                         </Swiper>
                     </div>
-                    <div className='w-full lg:w-2/3 text-neutral-500 child:mb-4'>
+                    <div className='w-full lg:w-2/3 text-neutral-500 child:mb-4 sm:break-words'>
                         <p>{typeOfService.subDescription}</p>
                         <p>{typeOfService.subDescription2}</p>
                         <p>{typeOfService.subDescription3}</p>

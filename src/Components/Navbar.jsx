@@ -21,7 +21,7 @@ const Navbar = (props) => {
 
 
     return (
-        <div className="flex flex-col justify-center items-center sticky top-0 overflow-y-hidden sm:z-50 md:z-50 lg:z-50">
+        <div className="flex flex-col justify-center items-center sticky top-0 sm:z-50 md:z-50 lg:z-50">
             {/* First Navbar */}
             <div className="flex sm:flex-col lg:flex-row lg:justify-around sm:py-3 md:py-5 sm:justify-center md:justify-around  items-center lg:h-[3.5rem] bg-[#849661] w-full text-white text-xs">
                 <div className="lg:flex lg:flex-row md:grid md:grid-cols-2 sm:flex sm:flex-col sm:gap-1 sm:items-center child:items-center lg:divide-x lg:divide-slate-400 child:tracking-widest">
@@ -71,14 +71,14 @@ const Navbar = (props) => {
                     <button type="button" className="bg-[#849661] w-[14%] h-3/5 text-white rounded-md hover:bg-[#6B7D4A] duration-300 sm:hidden md:hidden"><Link to="/free-quote">{t("navbarButton")}</Link></button>
                 </div>
                 <div className="lg:hidden w-full">
-                    <div className={(menu) ? "bg-white closeEffect z-20" : "bg-white openEffect z-20 pb-5"}>
+                    <div className={(menu) ? "bg-white closeEffect z-20" : "bg-white openEffect z-20 pb-5 sm:pb-4"}>
                         <ul className="child:font-bold child:pt-7 sm:pl-5 md:pl-12 child:tracking-wider">
-                            <li><Link to="/" onClick={() => setMenu(!menu)} className={location.pathname === "/" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("home")}</Link></li>
-                            <li><Link to="/about" onClick={() => setMenu(!menu)} className={location.pathname === "/about" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("about")}</Link></li>
-                            <li><Link to="/services" onClick={() => setMenu(!menu)} className={location.pathname.startsWith("/services") ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("services")}</Link></li>
-                            <li><Link to="/blogs" onClick={() => setMenu(!menu)} className={location.pathname.startsWith("/blogs") ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("blog")}</Link></li>
-                            <li><Link to="/dental-tourism" onClick={() => setMenu(!menu)} className={location.pathname === "/dental-tourism" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("dentalTourism")}</Link></li>
-                            <li><Link to="/free-quote" onClick={() => setMenu(!menu)} className={location.pathname === "/free-quote" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("contact")}</Link></li>
+                            <li className="sm:min-h-[44px] sm:flex sm:items-center"><Link to="/" onClick={() => setMenu(!menu)} className={location.pathname === "/" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("home")}</Link></li>
+                            <li className="sm:min-h-[44px] sm:flex sm:items-center"><Link to="/about" onClick={() => setMenu(!menu)} className={location.pathname === "/about" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("about")}</Link></li>
+                            <li className="sm:min-h-[44px] sm:flex sm:items-center"><Link to="/services" onClick={() => setMenu(!menu)} className={location.pathname.startsWith("/services") ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("services")}</Link></li>
+                            <li className="sm:min-h-[44px] sm:flex sm:items-center"><Link to="/blogs" onClick={() => setMenu(!menu)} className={location.pathname.startsWith("/blogs") ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("blog")}</Link></li>
+                            <li className="sm:min-h-[44px] sm:flex sm:items-center"><Link to="/dental-tourism" onClick={() => setMenu(!menu)} className={location.pathname === "/dental-tourism" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("dentalTourism")}</Link></li>
+                            <li className="sm:min-h-[44px] sm:flex sm:items-center"><Link to="/free-quote" onClick={() => setMenu(!menu)} className={location.pathname === "/free-quote" ? "text-[#6B7D4A]" : "text-[#849661]"}>{t("contact")}</Link></li>
                         </ul>
                         <button type='submit' className='px-5 py-3 rounded-md bg-[#849661] border-none hover:bg-[#6B7D4A] text-white duration-300 m-5 md:ml-12'><Link to="/free-quote">{t("navbarButton")}</Link></button>
                     </div>

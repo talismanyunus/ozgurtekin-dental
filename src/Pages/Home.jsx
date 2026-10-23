@@ -71,7 +71,7 @@ const Home = (props) => {
           <img src={Slide1} onDragStart={handleDragStart} alt="Slide 1" role="presentation" className="md:w-full blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full  sm:object-cover md:object-center"/>
           <div className="scrollLeft absolute left-0 top-0 bottom-0 sm:w-full md:w-full lg:w-1/2 bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">
-              <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br className="sm:hidden"/> }}>{t("homeCarousel1")}</Trans> </p>
+              <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize break-words"><Trans components={{ br: <br className="sm:hidden"/> }}>{t("homeCarousel1")}</Trans> </p>
               <p className="sm:mt-5 md:mt-7 font-bold lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 capitalize"><Trans components={{ br: <br className="sm:hidden"/> }}>{t("carouselAbout1")}</Trans></p>
               <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 sm:py-3 md:py-5 lg:py-4 mt-5 lg:mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
             </div>
@@ -82,7 +82,7 @@ const Home = (props) => {
           <img src={Slide2} onDragStart={handleDragStart} alt="Slide 2" role="presentation" className="md:w-full blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full sm:object-cover md:object-center"/>
           <div className="absolute left-0 top-0 bottom-0 sm:w-full md:w-full lg:w-1/2 bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">              
-              <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:-mt-5 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br className="sm:hidden"/>}}>{t("homeCarousel2")}</Trans></p>
+              <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:-mt-5 md:mt-4 lg:mt-5 capitalize break-words"><Trans components={{ br: <br className="sm:hidden"/>}}>{t("homeCarousel2")}</Trans></p>
               <p className="sm:mt-5 md:mt-7 lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 font-bold capitalize"><Trans components={{ br: <br/> }}>{t("carouselAbout2")}</Trans></p>
               <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 sm:py-3 md:py-5 lg:py-4 mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
             </div>
@@ -93,7 +93,7 @@ const Home = (props) => {
           <img src={Slide3} onDragStart={handleDragStart} alt="Slide 3" role="presentation" className="blur-[1px] sm:bg-center md:bg-center sm:h-full md:h-full sm:object-cover md:w-full"/>
           <div className="absolute left-0 top-0 bottom-0 sm:w-full md:w-full lg:w-1/2 bg-white bg-gradient-to-r from-slate-300 to-transparent  lg:bg-opacity-50 sm:bg-opacity-10 md:bg-opacity-20 sm:pl-10 md:pl-16 lg:pl-20">
             <div className="flex flex-col justify-center w-full h-full">              
-              <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize"><Trans components={{ br: <br/> }}>{t("homeCarousel3")}</Trans></p>
+              <p className="text-[#2d3a1e] sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:mt-3 md:mt-4 lg:mt-5 capitalize break-words"><Trans components={{ br: <br/> }}>{t("homeCarousel3")}</Trans></p>
               <p className="sm:mt-5 font-bold md:mt-7 lg:mt-10 md:w-40px text-[#3d4f28] lg:pr-20 leading-7 capitalize"><Trans components={{ br: <br/> }}>{t("carouselAbout3")}</Trans></p>
               <Link to="/free-quote"><button type="button" className="bg-[#849661] sm:w-3/5 md:w-2/5 lg:w-2/5 sm:py-3 md:py-5 lg:py-4 mt-10 text-white rounded-md hover:bg-[#6B7D4A] duration-300">{t("carouselButton")}</button></Link>
             </div>
@@ -160,25 +160,25 @@ const Home = (props) => {
           <div className={(button1) ? "visible" : "hidden"}>
             <div className="fadeInLeft">
               <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">{t("button1Title")}</p>
-              <p className="text-neutral-500 md:text-xl"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}> {t("button1Description1")}</Trans></p>
+              <p className="text-neutral-500 md:text-xl sm:break-words"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}> {t("button1Description1")}</Trans></p>
             </div>
           </div>
           <div className={(button2) ? "visible" : "hidden"}>
             <div className="fadeInLeft">
               <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">{t("button2Title")}</p>
-              <p className="text-neutral-500 md:text-xl"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("button2Description1")}</Trans></p>
+              <p className="text-neutral-500 md:text-xl sm:break-words"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("button2Description1")}</Trans></p>
             </div>
           </div>
           <div className={(button3) ? "visible" : "hidden"}>
             <div className="fadeInLeft">
               <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">{t("button3Title")}</p>
-              <p className="text-neutral-500 md:text-xl"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("button3Description1")}</Trans></p>
+              <p className="text-neutral-500 md:text-xl sm:break-words"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("button3Description1")}</Trans></p>
             </div>
           </div>
           <div className={(button4) ? "visible" : "hidden"}>
             <div className="fadeInLeft">
               <p className="text-[#849661] font-bold text-xl md:text-3xl mb-4">{t("button4Title")}</p>
-              <p className="text-neutral-500 md:text-xl"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("button4Description1")}</Trans></p>
+              <p className="text-neutral-500 md:text-xl sm:break-words"><Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("button4Description1")}</Trans></p>
             </div>
           </div>
         </div>

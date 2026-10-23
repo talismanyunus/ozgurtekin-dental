@@ -103,7 +103,7 @@ const BlogTypes = props => {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div className="w-full text-neutral-500 child:mb-4">
+                <div className="w-full text-neutral-500 child:mb-4 sm:break-words">
                     <p>{blogType.subDescription}</p>
                     <p>{blogType.subDescription2}</p>
                     <p>{blogType.subDescription3}</p>

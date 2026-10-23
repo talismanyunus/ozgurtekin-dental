@@ -97,7 +97,7 @@ const Services = (props) => {
                       alt={data.title}
                       className='relative -top-7 left-3 z-10 p-2 rounded-full bg-white shadow shadow-neutral-400 group-hover:bg-[#6B7D4A] border-4 border-white duration-300'
                     />
-                    <div className='-mt-4'>
+                    <div className='-mt-4 min-w-0'>
                       <Link to={`/services/${data.id}`} onClick={() => setTypeOfService(data)}>
                         <p className='text-[#849661] text-xl font-bold pb-3 hover:text-[#6B7D4A] duration-200'>{data.title}</p>
                       </Link>

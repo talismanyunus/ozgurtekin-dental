@@ -4,7 +4,7 @@ html{
 
 body{
     min-height: 100vh;
-    min-height: -webkit-fill-available;
+    min-height: 100svh;
 }
 
 *{
@@ -91,7 +91,8 @@ body{
 /* For Mobile */
 @media screen and (max-width: 767px) {
     .map-container {
-        width: 50vh;
+        width: 100%;
+        max-width: 100%;
         height: 53vh;
     }
 
