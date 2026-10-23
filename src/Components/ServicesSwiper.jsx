@@ -23,7 +23,7 @@ const ServicesSwiper = () => {
   const { t } = useTranslation();
 
   return (
-    <ScrollAnimation className='flex w-full flex-col justify-center items-center mb-32' animateIn='fadeInTop'>
+    <ScrollAnimation className='flex w-full flex-col justify-center items-center mb-32 overflow-hidden' animateIn='fadeInTop'>
       <div className='w-full sm:px-3 md:px-20 lg:px-32'>
         <div className='text-center'>
           <p className="text-[#6B7D4A] font-bold">{t("ourServices")}</p>
@@ -75,7 +75,7 @@ const ServicesSwiper = () => {
         </Swiper>
       </div>
       <Link to="/services">
-        <button type='submit' className='h-16 bg-[#6B7D4A] px-20 rounded-lg duration-300 border-none hover:bg-[#849661] text-white mt-10'>
+        <button type='submit' className='h-16 bg-[#6B7D4A] sm:px-8 md:px-12 lg:px-20 rounded-lg duration-300 border-none hover:bg-[#849661] text-white mt-10'>
           {t("ourServicesButton")}
         </button>
       </Link>

@@ -11,7 +11,7 @@ const AboutPageGallery = () => {
     const { t } = useTranslation()
 
     return (
-        <ScrollAnimation className='flex w-full justify-center items-center sm:mb-12 md:mb-24 lg:mb-32' animateIn='fadeInTop'>
+        <ScrollAnimation className='flex w-full justify-center items-center sm:mb-12 md:mb-24 lg:mb-32 overflow-hidden' animateIn='fadeInTop'>
             <div className='w-full sm:px-5 md:px-16 lg:px-32 '>
                 <p className="text-[#6B7D4A] font-bold">{t("aboutGallery")}</p>
                 <p className="sm:text-2xl md:text-4xl lg:text-4xl font-bold text-[#849661] mt-3 mb-10">
