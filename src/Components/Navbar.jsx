@@ -22,8 +22,8 @@ const Navbar = (props) => {
 
     return (
         <div className="flex flex-col justify-center items-center sticky top-0 sm:z-50 md:z-50 lg:z-50">
-            {/* First Navbar */}
-            <div className="flex sm:flex-col lg:flex-row lg:justify-around sm:py-3 md:py-5 sm:justify-center md:justify-around  items-center lg:h-[3.5rem] bg-[#849661] w-full text-white text-xs">
+            {/* First Navbar — mobilde gizle */}
+            <div className="sm:hidden flex lg:flex-row lg:justify-around md:py-5 md:justify-around items-center lg:h-[3.5rem] bg-[#849661] w-full text-white text-xs">
                 <div className="lg:flex lg:flex-row md:grid md:grid-cols-2 sm:flex sm:flex-col sm:gap-1 sm:items-center child:items-center lg:divide-x lg:divide-slate-400 child:tracking-widest">
                     <a href="tel:+905078788507"><p className="flex flex-row justify-center gap-2 md:pr-3 lg:pr-7 md:border-r">
                         <img src={PhoneCallIcon} alt="Phone Icon" />
