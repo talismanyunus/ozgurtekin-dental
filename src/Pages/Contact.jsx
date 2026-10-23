@@ -48,22 +48,22 @@ const Contact = (props) => {
   return (
     <div className='flex sm:flex-col md:flex-col lg:flex-row justify-center gap-10 w-full mb-24 sm:px-3 md:px-16 '>
       <form className='sm:w-full lg:w-[38%]  text-white' action="https://formspree.io/f/mbjevbjr" method="POST">
-        <div className='flex flex-col child:mb-5 child:px-8 pt-8 BackgroundImage'>
+        <div className='flex flex-col child:mb-5 sm:child:px-3 md:child:px-5 lg:child:px-8 pt-8 BackgroundImage'>
           <p className="text-2xl font-bold">{t("formTitle")}</p>
           <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-5  '>
             {/* Full Name Field */}
-            <input type='text' placeholder={t("formName")} name='Emri Mbiemri' onChange={(e) => nameValidation(e)} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
+            <input type='text' placeholder={t("formName")} name='Emri Mbiemri' onChange={(e) => nameValidation(e)} className='w-full bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Email Field */}
-            <input type='email' placeholder={t("formEmail")} name="Adresa Emailit" onChange={(e) => emailValidation(e)} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
+            <input type='email' placeholder={t("formEmail")} name="Adresa Emailit" onChange={(e) => emailValidation(e)} className='w-full bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Date Field */}
-            <input type='text' placeholder="Date" name="Data e Takimit" onFocus={(e) => (e.target.type = 'date')} onBlur={(e) => (e.target.type = 'text')} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
+            <input type='text' placeholder="Date" name="Data e Takimit" onFocus={(e) => (e.target.type = 'date')} onBlur={(e) => (e.target.type = 'text')} className='w-full bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Time Field */}
-            <input type='text' placeholder={t("formTime")} name="Orari Takimit" onFocus={(e) => (e.target.type = 'time')} onBlur={(e) => (e.target.type = 'text')} className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
+            <input type='text' placeholder={t("formTime")} name="Orari Takimit" onFocus={(e) => (e.target.type = 'time')} onBlur={(e) => (e.target.type = 'text')} className='w-full bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 placeholder-white text-white' required/>
             {/* Category Field */}
             <select onChange={(e) => {
               categoryFilter(e)
               setCategory(e)
-              }} name="Kategoria" className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 text-white'required>
+              }} name="Kategoria" className='w-full bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 text-white'required>
             {
               language === "it"
               ? Array.from(SubCategorysItalian).map(data => (
@@ -79,7 +79,7 @@ const Contact = (props) => {
             }
             </select>
             {/* Service Field */}
-            <select name="Sherbimi" className='bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 text-white' required>
+            <select name="Sherbimi" className='w-full bg-white bg-opacity-20 border-white border rounded-md pl-3 py-3 text-white' required>
               {
                 Array.from(categoryData).map(data => (
                   <option className='text-neutral-800' key={data} value={data}>{data}</option>
@@ -88,15 +88,17 @@ const Contact = (props) => {
             </select>
           </div>
           <div className='flex flex-col child:mb-5'>
-            <input type='Numri Telefonit' name="Phone Number" placeholder={t("formNumber")} onChange={(e) => numberValidation(e)} className='py-3 pl-3 bg-white bg-opacity-20 rounded-md border border-white placeholder-white text-white' width={'20px'} required/>
-            <textarea placeholder={t("formMessage")} name="Mesazhi " rows={4} className='pl-3 py-3 bg-white bg-opacity-20 border border-white mb-5 rounded-md placeholder-white text-white'/>
-          <button type='submit' className='h-16 bg-[#6B7D4A] border-none hover:bg-white hover:text-black duration-300'>Book Appointment</button>
+            <input type='Numri Telefonit' name="Phone Number" placeholder={t("formNumber")} onChange={(e) => numberValidation(e)} className='w-full py-3 pl-3 bg-white bg-opacity-20 rounded-md border border-white placeholder-white text-white' required/>
+            <textarea placeholder={t("formMessage")} name="Mesazhi " rows={4} className='w-full pl-3 py-3 bg-white bg-opacity-20 border border-white mb-5 rounded-md placeholder-white text-white'/>
+          <button type='submit' className='w-full h-16 bg-[#6B7D4A] border-none hover:bg-white hover:text-black duration-300'>Book Appointment</button>
           </div>
         </div>
       </form>
-      <div className='w-full sm:w-full'>
+      <div className='w-full'>
         <p className='text-[#6B7D4A] font-medium'>{t("locationTitle")}</p>
-        <Maps/>
+        <div className='sm:h-64 md:h-80 lg:h-full'>
+          <Maps/>
+        </div>
       </div>
     </div>
   )
