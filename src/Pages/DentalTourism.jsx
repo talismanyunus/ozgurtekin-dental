@@ -37,7 +37,7 @@ const DentalTourism = () => {
   
 
   return (
-    <div className="w-full flex-col">
+    <div className="w-full flex-col overflow-x-hidden">
       {/* First Section */}
       <div className="flex flex-row justify-between sm:px-5 md:px-10 lg:px-28 py-10 items-center">
         <div className="flex flex-col gap-3">
@@ -59,7 +59,7 @@ const DentalTourism = () => {
           alt="About Image Section 1"
           className="sm:w-full lg:w-2/5"
         />
-        <div className="items-center  md:px-16">
+        <div className="items-center sm:px-0 md:px-16">
           <p className="text-[#849661] sm:text-3xl text-4xl font-bold py-5">
             {t("dentalTourismPage")}
           </p>
@@ -86,7 +86,7 @@ const DentalTourism = () => {
               <Trans components={{ br: <br className="sm:hidden md:hidden"/> }}>{t("dentalTitle")}</Trans>
             </p>
           </div>
-          <div className="flex sm:flex-col md:flex-col gap-5 z-10 mb-10 child:text-white child:rounded-md child-hover:bg-[#6B7D4A] child:px-6 md:child:px-5 child:py-4 md:child:py-2 child:duration-300 md:child:text-2xl">
+          <div className="flex sm:flex-col md:flex-col gap-5 z-10 mb-10 child:text-white child:rounded-md child-hover:bg-[#6B7D4A] child:px-6 md:child:px-5 child:py-4 md:child:py-2 child:duration-300 md:child:text-lg lg:child:text-base">
             <button
               type="button"
               id="Family"
