@@ -32,8 +32,8 @@ function App() {
       {
         loading 
           ? 
-            <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-              <img src={Logo} alt='Logo Loading' className='animate-bounce w-56 overflow-visible'/>
+            <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-50">
+              <img src={Logo} alt='Logo Loading' className='animate-bounce w-56 max-w-[70vw]'/>
             </div>
         
           : 
