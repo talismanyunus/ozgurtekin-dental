@@ -25,13 +25,13 @@ const Navbar = (props) => {
             {/* First Navbar */}
             <div className="flex sm:flex-col lg:flex-row lg:justify-around sm:py-3 md:py-5 sm:justify-center md:justify-around  items-center lg:h-[3.5rem] bg-[#849661] w-full text-white text-xs">
                 <div className="lg:flex lg:flex-row md:grid md:grid-cols-2 child:items-center  lg:divide-x lg:divide-slate-400 child:tracking-widest">
-                    <a href="tel:+905461893060"><p className="flex flex-row justify-center gap-2 md:pr-3 lg:pr-7 md:border-r ">
+                    <a href="tel:+905078788507"><p className="flex flex-row justify-center gap-2 md:pr-3 lg:pr-7 md:border-r ">
                         <img src={PhoneCallIcon} alt="Phone Icon" />
-                        0546 189 30 60
+                        0507 878 85 07
                     </p></a>
-                    <a href="mailto:info@petradent.com"><p className="flex flex-row justify-center gap-2 sm:py-1 md:pl-3 lg:px-7">
+                    <a href="mailto:info@ozgurtekin.com"><p className="flex flex-row justify-center gap-2 sm:py-1 md:pl-3 lg:px-7">
                         <img src={EmailIcon} alt="Email Icon" />
-                        info@petradent.com
+                        info@ozgurtekin.com
                     </p></a>
                     <p className="flex flex-row justify-center md:justify-start gap-2 lg:pl-7 md:pt-2 md:col-span-2 ">
                         <img src={Clock} alt="Clock Icon" />

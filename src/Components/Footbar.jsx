@@ -18,15 +18,15 @@ const Footbar = () => {
                 <div className='border-b w-16 border-white border-opacity-40 border-[1px] mt-6'></div>
                 <p className='flex flex-row gap-2 mt-8 text-white'>
                     <img src={Location} alt="Location Icon"/>
-                    Cikcilli, Eğriköprü Cd. No:21/B, 07400 Alanya/Antalya
+                    Mahmutlar, Selahattin Yaman Cd. No:7/B, 07450 Alanya/Antalya
                 </p>
-                <a href="tel:+905461893060"><p className='flex flex-row gap-2 my-4 text-white'>
+                <a href="tel:+905078788507"><p className='flex flex-row gap-2 my-4 text-white'>
                     <img src={Contact} alt='Contact Support'/>
-                    0546 189 30 60
+                    0507 878 85 07
                 </p></a>
-                <a href="mailto:info@petradent.com"><p className='flex flex-row gap-2 text-white'>
+                <a href="mailto:info@ozgurtekin.com"><p className='flex flex-row gap-2 text-white'>
                     <img src={EmailIcon} alt='Email Icon'/>
-                    info@petradent.com
+                    info@ozgurtekin.com
                 </p></a>
             </div>
             <div className='sm:mt-5'>
@@ -52,7 +52,7 @@ const Footbar = () => {
         </div>
         {/* Alt imza çizgisi */}
         <div className='border-t border-white border-opacity-20 mt-10 py-5 flex sm:flex-col md:flex-row justify-between items-center sm:px-3 md:px-16 gap-2'>
-            <p className='text-white text-opacity-70 text-sm'>© {new Date().getFullYear()} Petra Dent Ağız ve Diş Sağlığı. Tüm hakları saklıdır.</p>
+            <p className='text-white text-opacity-70 text-sm'>© {new Date().getFullYear()} Dt. Özgür Tekin Ağız ve Diş Sağlığı. Tüm hakları saklıdır.</p>
             <a href="https://yusahmedia.com" target='_blank' rel='noreferrer' className='text-white text-opacity-70 text-sm hover:text-opacity-100 duration-300'>
                 Tasarım & Geliştirme: <span className='font-semibold text-white'>yusahmedia</span>
             </a>

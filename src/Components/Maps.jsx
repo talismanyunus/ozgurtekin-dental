@@ -16,7 +16,7 @@ const Maps = () => {
     }, [])
 
     // Google Maps embed — API key gerektirmez
-    const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.123456789!2d32.0040!3d36.5440!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDMyJzM4LjQiTiAzMsKwMDAnMTQuNCJF!5e0!3m2!1str!2str!4v1234567890&q=Saray,+E%C4%9Frik%C3%B6pr%C3%BC+Cd.+No:21/B,+Alanya"
+    const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3189.123456789!2d32.0040!3d36.5440!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDMyJzM4LjQiTiAzMsKwMDAnMTQuNCJF!5e0!3m2!1str!2str!4v1234567890&q=Saray,+Mahmutlar,+Selahattin+Yaman+Cd.+No:7/B,+Alanya"
 
     return (
         <div className='map-container rounded-lg overflow-hidden border border-gray-200'
@@ -29,7 +29,7 @@ const Maps = () => {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps?q=Saray,+Eğriköprü+Cd.+No:21/B,+07400+Alanya/Antalya&output=embed`}
+                src={`https://www.google.com/maps?q=Saray,+Mahmutlar,+Selahattin+Yaman+Cd.+No:7/B,+07450+Alanya/Antalya&output=embed`}
             />
         </div>
     )
